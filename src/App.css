@@ -1,0 +1,7 @@
+.center-content {
+  display: flex;
+  align-items: center; }
+
+#header {
+  min-height: 75px;
+  height: 75px; }
