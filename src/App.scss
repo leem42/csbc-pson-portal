@@ -7,3 +7,13 @@
   min-height: 75px;
   height: 75px;
 }
+
+.SRC-primary-background-color-hover:hover {
+  background: #D53F77 !important;
+  color: white;
+}
+
+.SRC-primary-background-color-hover.SRC-nested-color:hover > * {
+  background: #D53F77;
+  color: white;
+}
