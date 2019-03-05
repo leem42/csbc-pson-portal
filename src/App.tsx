@@ -14,7 +14,7 @@ const App: React.SFC<{}> = ({}) => (
             <Link to="/"> CSBC-PSON Data Portal </Link>
           </div>
           <div className="col-xs-6">
-            <Link to="/Explore"> Explore </Link>
+            <Link to="/Explore/Grants"> Explore </Link>
             <Link to="/About"> About </Link>
           </div>
         </div>
@@ -23,7 +23,7 @@ const App: React.SFC<{}> = ({}) => (
         <Switch>
           <Route exact={true} path="/" component={Home}/>
           <Route path="/About" component={About}/>
-          <Route path="/Explore" component={Explore}/>
+          <Route path="/Explore/Grants" component={Explore}/>
         </Switch>
       </React.Suspense>
     </React.Fragment>
