@@ -19,7 +19,7 @@ const App: React.SFC<{}> = ({}) => (
           </div>
         </div>
       </div>
-      <React.Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense fallback={<div/>}>
         <Switch>
           <Route exact={true} path="/" component={Home}/>
           <Route path="/About" component={About}/>
