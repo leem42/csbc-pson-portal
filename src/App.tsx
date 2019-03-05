@@ -1,26 +1,33 @@
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import * as React from 'react'
-import './App.css'
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const Home = React.lazy(() => import('./Home'))
+const Explore = React.lazy(() => import('./Explore'))
+const About = React.lazy(() => import('./About'))
+
+const App: React.SFC<{}> = ({}) => (
+  <React.Fragment>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-6">
+          CSBC-PSON Data Portal
+        </div>
+        <div className="col-xs-6">
+          Buttons
+        </div>
       </div>
-    )
-  }
-}
+    </div>
+    {/* @ts-ignore */}
+    <HashRouter>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact={true} path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/explore" component={Explore}/>
+        </Switch>
+      </React.Suspense>
+    </HashRouter>
+  </React.Fragment>
+)
 
 export default App
