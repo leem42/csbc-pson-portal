@@ -8,6 +8,7 @@ const About = React.lazy(() => import('./About'))
 const App: React.SFC<{}> = ({}) => (
   <HashRouter>
     <React.Fragment>
+      {/* main links in header */}
       <div id="header" className="container">
         <div className="row">
           <div className="col-xs-6 text-center">
@@ -19,6 +20,7 @@ const App: React.SFC<{}> = ({}) => (
           </div>
         </div>
       </div>
+      {/* all the content below */}
       <React.Suspense fallback={<div/>}>
         <Switch>
           <Route exact={true} path="/" component={Home}/>
