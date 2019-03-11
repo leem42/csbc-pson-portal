@@ -4,7 +4,11 @@
 
 #header {
   min-height: 75px;
-  height: 75px; }
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: white; }
 
 .SRC-primary-background-color-hover:hover {
   background: #D53F77 !important;
@@ -13,3 +17,7 @@
 .SRC-primary-background-color-hover.SRC-nested-color:hover > * {
   background: #D53F77;
   color: white; }
+
+.spacer {
+  min-height: 75px;
+  height: 75px; }

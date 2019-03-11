@@ -3,9 +3,15 @@
   align-items: center;
 }
 
+$header-height : 75px;
+
 #header {
-  min-height: 75px;
-  height: 75px;
+  min-height: $header-height;
+  height: $header-height;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: white;
 }
 
 .SRC-primary-background-color-hover:hover {
@@ -16,4 +22,9 @@
 .SRC-primary-background-color-hover.SRC-nested-color:hover > * {
   background: #D53F77;
   color: white;
+}
+
+.spacer {
+  min-height: $header-height;
+  height: $header-height;
 }
