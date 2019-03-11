@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "pushing local to production"
+aws s3 sync --delete --cache-control max-age=3000 s3://staging.csbc-pson.synapse.org s3://prod.csbc-pson.synapse.org
