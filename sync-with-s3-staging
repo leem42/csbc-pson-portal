@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "pushing local to staging"
+aws s3 sync --delete --cache-control max-age=0 ./build s3://staging.csbc-pson.synapse.org
