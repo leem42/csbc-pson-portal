@@ -10,6 +10,7 @@ export function Navbar() {
     setIsDropdownOpen(!isDropdownOpen)
   }
 
+  // given the hash, decide if the link should have a bottom border
   const getBorder = (path: string) => {
     const hash = window.location.hash.substring(2)
     return hash.includes(path) ? 'bottom-border' : ''
@@ -23,41 +24,47 @@ export function Navbar() {
       <div className="center-content nav-link-container">
         <Link className={`center-content quarter-flex-basis nav-button ${getBorder('Home')}`} to="/Home"> Home </Link>
         <div className={`dropdown quarter-flex-basis ${isDropdownOpen ? 'open' : ''} ${getBorder('Explore')}`}>
-          <Link onClick={toggleDropdown} className="center-content nav-button" to="/Explore"> Explore </Link>
+          <div onClick={toggleDropdown} className="center-content nav-button"> Explore </div>
           {isDropdownOpen
             &&
             <div className="dropdown-menu">
               <Link
+                onClick={toggleDropdown}
                 className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
                 to="/Explore/Grants"
               >
                 Grants
               </Link>
               <Link
+                onClick={toggleDropdown}
                 className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
                 to="/Explore/Studies"
               >
                 Studies
               </Link>
               <Link
+                onClick={toggleDropdown}
                 className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
                 to="/Explore/Publications"
               >
                 Publications
               </Link>
               <Link
+                onClick={toggleDropdown}
                 className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
                 to="/Explore/Datasets"
               >
                 Datasets
               </Link>
               <Link
+                onClick={toggleDropdown}
                 className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
                 to="/Explore/Data"
               >
                 Data Files
               </Link>
               <Link
+                onClick={toggleDropdown}
                 className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
                 to="/Explore/Tools"
               >

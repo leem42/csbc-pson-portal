@@ -81,6 +81,7 @@ $seconday-text-color: #47337D;;
   color: $seconday-text-color;
 }
 
+
 .bottom-border {
   border-bottom-style: solid;
   border-bottom-width: 3px;
@@ -113,6 +114,8 @@ $seconday-text-color: #47337D;;
   height: 37px;
 }
 
+// bootstrap override
 .dropdown-menu {
+  margin: 0px;
   border-radius: 0%;
 }
