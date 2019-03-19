@@ -21,7 +21,7 @@ export function Navbar() {
   }
 
   return (
-    <div className="flex-display nav">
+    <nav className="flex-display nav">
       <div className="center-content nav-logo-container">
         <Link to="/" id="home-link"> CSBC / PS-ON </Link>
       </div>
@@ -80,6 +80,6 @@ export function Navbar() {
         <Link className={`center-content quarter-flex-basis nav-button ${getBorder('Programs')}`} to="/Programs"> Programs </Link>
         <Link className={`center-content quarter-flex-basis nav-button ${getBorder('About')}`} to="/About"> About </Link>
       </div>
-    </div>
+    </nav>
   )
 }

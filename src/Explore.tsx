@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { SynapseComponents, SynapseConstants } from 'synapse-react-client'
 import { synapseConfigs } from './synapseConfigs'
+import { ExploreButtons } from './ExploreButtons'
 
 export default class Explore extends React.Component<{}, {}> {
 
@@ -22,8 +23,14 @@ export default class Explore extends React.Component<{}, {}> {
 
   render () {
     const props = this.getPropsFromHash()
+    const fn = (val: string) => { console.log(val) }
+    const isSelected = (val: string) => 'hello'
     return (
       <div className="container">
+        <ExploreButtons
+          isSelected={isSelected}
+          handleChanges={fn}
+        />
         <SynapseComponents.QueryWrapperMenu
           {...props}
         />

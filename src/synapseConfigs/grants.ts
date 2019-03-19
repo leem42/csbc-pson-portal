@@ -1,7 +1,9 @@
-import * as React from 'react'
 import { SynapseConstants } from 'synapse-react-client'
 
-const grants = {
+const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`
+
+export const grants = {
+  name: 'grants',
   type: SynapseConstants.CSBC_PROJECT,
   menuConfig: [
     {
@@ -23,10 +25,18 @@ const grants = {
   ],
   rgbIndex: 0,
   unitDescription: 'grants',
-  loadingScreen: (<div/>),
-  filter: 'diseaseFocus'
-}
-
-export const synapseConfigs = {
-  grants
+  facetName: 'grantType',
+  initQueryRequest : {
+    concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
+    partMask:
+      SynapseConstants.BUNDLE_MASK_QUERY_COLUMN_MODELS
+      | SynapseConstants.BUNDLE_MASK_QUERY_FACETS
+      | SynapseConstants.BUNDLE_MASK_QUERY_RESULTS,
+    query: {
+      sql,
+      isConsistent: false,
+      limit: 25,
+      offset: 0,
+    }
+  }
 }

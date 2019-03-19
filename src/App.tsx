@@ -3,6 +3,7 @@ import * as React from 'react'
 import './App.css'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
+import { Header } from './Header'
 const Home = React.lazy(() => import('./Home'))
 const Explore = React.lazy(() => import('./Explore'))
 const About = React.lazy(() => import('./About'))
@@ -10,10 +11,7 @@ const About = React.lazy(() => import('./About'))
 const App: React.SFC<{}> = ({}) => (
   <HashRouter>
     <React.Fragment>
-      {/* main links in header */}
-      <header id="header">
-        <Navbar/>
-      </header>
+      <Navbar/>
       <div className="spacer"/>
       {/* all the content below */}
       <main>
