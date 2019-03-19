@@ -1,7 +1,8 @@
-import { HashRouter, Route, Switch, Link } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import * as React from 'react'
 import './App.css'
 import { Navbar } from './Navbar'
+import { Footer } from './Footer'
 const Home = React.lazy(() => import('./Home'))
 const Explore = React.lazy(() => import('./Explore'))
 const About = React.lazy(() => import('./About'))
@@ -24,6 +25,7 @@ const App: React.SFC<{}> = ({}) => (
           </Switch>
         </React.Suspense>
       </main>
+      <Footer/>
     </React.Fragment>
   </HashRouter >
 )

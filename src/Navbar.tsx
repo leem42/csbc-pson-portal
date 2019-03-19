@@ -12,6 +12,10 @@ export function Navbar() {
 
   // given the hash, decide if the link should have a bottom border
   const getBorder = (path: string) => {
+    if (path === '') {
+      // special case the home page
+      return window.location.hash === '/#'
+    }
     const hash = window.location.hash.substring(2)
     return hash.includes(path) ? 'bottom-border' : ''
   }
@@ -22,9 +26,9 @@ export function Navbar() {
         <Link to="/" id="home-link"> CSBC / PS-ON </Link>
       </div>
       <div className="center-content nav-link-container">
-        <Link className={`center-content quarter-flex-basis nav-button ${getBorder('Home')}`} to="/Home"> Home </Link>
+        <Link className={`center-content quarter-flex-basis nav-button ${getBorder('')}`} to="/"> Home </Link>
         <div className={`dropdown quarter-flex-basis ${isDropdownOpen ? 'open' : ''} ${getBorder('Explore')}`}>
-          <div onClick={toggleDropdown} className="center-content nav-button"> Explore </div>
+          <div onClick={toggleDropdown} className="center-content nav-button hand-cursor"> Explore </div>
           {isDropdownOpen
             &&
             <div className="dropdown-menu">

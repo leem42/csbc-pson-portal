@@ -47,7 +47,7 @@ $seconday-text-color: #47337D;;
 }
 
 .nav {
-  background: #FFFFFF;
+  background: white;
   height: 67px;
   a:hover {
     text-decoration: none;
@@ -118,4 +118,46 @@ $seconday-text-color: #47337D;;
 .dropdown-menu {
   margin: 0px;
   border-radius: 0%;
+}
+
+#portal-title-footer {
+  flex-basis: 80%;
+  font-size: 25px;
+  padding-left: 15px;
+}
+
+#portal-contact-footer {
+  flex-basis: 20%;
+  display: flex;
+}
+
+.footer-link {
+  flex-basis: 50%;
+}
+
+
+.hand-cursor {
+  cursor: pointer;
+}
+
+#footer {
+  background-image: url("./assets/dna.svg");
+  background-blend-mode: multiply;
+  background-color: #407BA0;;
+  color: white;
+  a {
+    color: white;
+  }
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.SRC-primary-text-color {
+  color: $seconday-text-color !important;
+}
+
+.SRC-portalCard a {
+  color: $seconday-text-color !important;
 }

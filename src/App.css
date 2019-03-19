@@ -35,7 +35,7 @@ body {
   flex-basis: 50%; }
 
 .nav {
-  background: #FFFFFF;
+  background: white;
   height: 67px; }
   .nav a:hover {
     text-decoration: none;
@@ -92,3 +92,36 @@ body {
 .dropdown-menu {
   margin: 0px;
   border-radius: 0%; }
+
+#portal-title-footer {
+  flex-basis: 80%;
+  font-size: 25px;
+  padding-left: 15px; }
+
+#portal-contact-footer {
+  flex-basis: 20%;
+  display: flex; }
+
+.footer-link {
+  flex-basis: 50%; }
+
+.hand-cursor {
+  cursor: pointer; }
+
+#footer {
+  background-image: url("./assets/dna.svg");
+  background-blend-mode: multiply;
+  background-color: #407BA0;
+  color: white;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px; }
+  #footer a {
+    color: white; }
+
+.SRC-primary-text-color {
+  color: #47337D !important; }
+
+.SRC-portalCard a {
+  color: #47337D !important; }
