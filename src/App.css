@@ -14,11 +14,11 @@ body {
   background: white; }
 
 .SRC-primary-background-color-hover:hover {
-  background: #407BA0 !important;
+  background: #47337D !important;
   color: white; }
 
-.SRC-primary-background-color-hover.SRC-nested-color:hover > * {
-  background: #407BA0;
+.SRC-primary-background-color-hover.SRC-nested-color:hover {
+  background: #47337D;
   color: white; }
 
 .spacer {
@@ -64,6 +64,12 @@ body {
   margin-bottom: -3px;
   color: #47337D; }
 
+.bottom-border {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #47337D;
+  margin-bottom: -3px; }
+
 #home-link {
   font-weight: bold;
   font-size: 25px;
@@ -79,7 +85,9 @@ body {
     border-color: unset !important; }
 
 .dropdown-link {
-  color: #515359; }
+  color: #515359;
+  padding-left: 20px;
+  height: 37px; }
 
-.dropdown-link:hover {
-  color: #47337D; }
+.dropdown-menu {
+  border-radius: 0%; }

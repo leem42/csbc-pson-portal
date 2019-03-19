@@ -19,12 +19,12 @@ $seconday-text-color: #47337D;;
 }
 
 .SRC-primary-background-color-hover:hover {
-  background:  #407BA0 !important;
+  background: $seconday-text-color !important;
   color: white;
 }
 
-.SRC-primary-background-color-hover.SRC-nested-color:hover > * {
-  background:  #407BA0;
+.SRC-primary-background-color-hover.SRC-nested-color:hover {
+  background: $seconday-text-color;
   color: white;
 }
 
@@ -81,6 +81,13 @@ $seconday-text-color: #47337D;;
   color: $seconday-text-color;
 }
 
+.bottom-border {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color:#47337D;
+  margin-bottom: -3px;
+}
+
 #home-link {
   font-weight: bold;
   font-size: 25px;
@@ -102,8 +109,10 @@ $seconday-text-color: #47337D;;
 
 .dropdown-link {
   color: #515359;
+  padding-left: 20px;
+  height: 37px;
 }
 
-.dropdown-link:hover {
-  color: $seconday-text-color;
+.dropdown-menu {
+  border-radius: 0%;
 }
