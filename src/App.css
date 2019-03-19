@@ -94,13 +94,14 @@ body {
   border-radius: 0%; }
 
 #portal-title-footer {
-  flex-basis: 80%;
+  flex-basis: 70%;
   font-size: 25px;
   padding-left: 15px; }
 
 #portal-contact-footer {
-  flex-basis: 20%;
-  display: flex; }
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: row; }
 
 .footer-link {
   flex-basis: 50%; }
@@ -109,6 +110,7 @@ body {
   cursor: pointer; }
 
 #footer {
+  text-transform: uppercase;
   background-image: url("./assets/dna.svg");
   background-blend-mode: multiply;
   background-color: #407BA0;
@@ -125,3 +127,6 @@ body {
 
 .SRC-portalCard a {
   color: #47337D !important; }
+
+.footer-help {
+  flex-basis: 50%; }

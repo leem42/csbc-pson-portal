@@ -1,6 +1,7 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+// utilities
 .center-content {
   display: flex;
   align-items: center;
@@ -37,6 +38,9 @@ $seconday-text-color: #47337D;;
   display: flex;
 }
 
+// end utilities
+
+// nav
 .nav-logo-container {
   flex-basis: 50%;
 }
@@ -119,16 +123,19 @@ $seconday-text-color: #47337D;;
   margin: 0px;
   border-radius: 0%;
 }
+// end nav
 
+// footer
 #portal-title-footer {
-  flex-basis: 80%;
+  flex-basis: 70%;
   font-size: 25px;
   padding-left: 15px;
 }
 
 #portal-contact-footer {
-  flex-basis: 20%;
+  flex-basis: 30%;
   display: flex;
+  flex-direction: row;
 }
 
 .footer-link {
@@ -141,6 +148,7 @@ $seconday-text-color: #47337D;;
 }
 
 #footer {
+  text-transform: uppercase;
   background-image: url("./assets/dna.svg");
   background-blend-mode: multiply;
   background-color: #407BA0;;
@@ -161,3 +169,9 @@ $seconday-text-color: #47337D;;
 .SRC-portalCard a {
   color: $seconday-text-color !important;
 }
+
+.footer-help {
+  flex-basis: 50%;
+}
+
+// end footer
