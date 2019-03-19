@@ -1,10 +1,14 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
 .center-content {
   display: flex;
   align-items: center;
 }
 
 $header-height : 75px;
-
+$primary-text-color: #404B63;
+$seconday-text-color: #47337D;;
 #header {
   min-height: $header-height;
   height: $header-height;
@@ -15,16 +19,65 @@ $header-height : 75px;
 }
 
 .SRC-primary-background-color-hover:hover {
-  background: #D53F77 !important;
+  background:  #407BA0 !important;
   color: white;
 }
 
 .SRC-primary-background-color-hover.SRC-nested-color:hover > * {
-  background: #D53F77;
+  background:  #407BA0;
   color: white;
 }
 
 .spacer {
   min-height: $header-height;
   height: $header-height;
+}
+
+.flex-display {
+  display: flex;
+}
+
+.nav-logo-container {
+  flex-basis: 60%;
+}
+
+
+.nav-link-container {
+  flex-basis: 40%;
+}
+
+.nav {
+  background: #FFFFFF;
+  height: 67px;
+}
+
+.nav-button {
+  font-weight: bold;
+  height: -webkit-fill-available;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  color: $primary-text-color;
+  flex-basis: 25%;
+  text-decoration: none;
+}
+
+.nav-button:focus {
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color:#47337D;
+  margin-bottom: -3px;
+  color: $seconday-text-color;
+}
+
+#home-link {
+  font-weight: bold;
+  font-size: 25px;
+  color: $seconday-text-color;
+  margin-left: 15px;
 }
