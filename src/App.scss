@@ -38,36 +38,42 @@ $seconday-text-color: #47337D;;
 }
 
 .nav-logo-container {
-  flex-basis: 60%;
+  flex-basis: 50%;
 }
 
 
 .nav-link-container {
-  flex-basis: 40%;
+  flex-basis: 50%;
 }
 
 .nav {
   background: #FFFFFF;
   height: 67px;
+  a:hover {
+    text-decoration: none;
+    color: $seconday-text-color;
+  }
+  a:focus {
+    text-decoration: none;
+    color: $seconday-text-color;
+  }
 }
 
 .nav-button {
+  text-transform: uppercase;
   font-weight: bold;
   height: -webkit-fill-available;
   font-size: 16px;
   text-align: center;
   justify-content: center;
   color: $primary-text-color;
+  text-decoration: none;
+}
+
+.quarter-flex-basis {
   flex-basis: 25%;
-  text-decoration: none;
 }
-
-.nav-button:focus {
-  text-decoration: none;
-}
-
 .nav-button:hover {
-  text-decoration: none;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color:#47337D;
@@ -80,4 +86,24 @@ $seconday-text-color: #47337D;;
   font-size: 25px;
   color: $seconday-text-color;
   margin-left: 15px;
+}
+
+// bootstrap override
+.open > a {
+  color: $seconday-text-color !important;
+  background-color: white !important;
+  &:focus {
+    border-color: unset !important;
+  }
+  &:hover {
+    border-color: unset !important;
+  }
+}
+
+.dropdown-link {
+  color: #515359;
+}
+
+.dropdown-link:hover {
+  color: $seconday-text-color;
 }

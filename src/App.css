@@ -29,30 +29,35 @@ body {
   display: flex; }
 
 .nav-logo-container {
-  flex-basis: 60%; }
+  flex-basis: 50%; }
 
 .nav-link-container {
-  flex-basis: 40%; }
+  flex-basis: 50%; }
 
 .nav {
   background: #FFFFFF;
   height: 67px; }
+  .nav a:hover {
+    text-decoration: none;
+    color: #47337D; }
+  .nav a:focus {
+    text-decoration: none;
+    color: #47337D; }
 
 .nav-button {
+  text-transform: uppercase;
   font-weight: bold;
   height: -webkit-fill-available;
   font-size: 16px;
   text-align: center;
   justify-content: center;
   color: #404B63;
-  flex-basis: 25%;
   text-decoration: none; }
 
-.nav-button:focus {
-  text-decoration: none; }
+.quarter-flex-basis {
+  flex-basis: 25%; }
 
 .nav-button:hover {
-  text-decoration: none;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: #47337D;
@@ -64,3 +69,17 @@ body {
   font-size: 25px;
   color: #47337D;
   margin-left: 15px; }
+
+.open > a {
+  color: #47337D !important;
+  background-color: white !important; }
+  .open > a:focus {
+    border-color: unset !important; }
+  .open > a:hover {
+    border-color: unset !important; }
+
+.dropdown-link {
+  color: #515359; }
+
+.dropdown-link:hover {
+  color: #47337D; }
