@@ -12,6 +12,16 @@ body {
   padding-bottom: 60px;
   /* height of your footer */ }
 
+.menu-wall {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 900;
+  left: 0;
+  top: 0;
+  background: transparent;
+  border: none; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -41,6 +51,7 @@ body {
   flex-basis: 50%; }
 
 .nav {
+  padding-bottom: 3px;
   min-height: 75px;
   height: 75px;
   position: fixed;
@@ -108,6 +119,8 @@ body {
   flex-basis: 70%;
   font-size: 25px;
   padding-left: 15px; }
+  #portal-title-footer a {
+    text-decoration: none; }
 
 #portal-contact-footer {
   flex-basis: 30%;

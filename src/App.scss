@@ -16,6 +16,17 @@ body {
 }
 
 // utilities
+.menu-wall {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 900;
+  left: 0;
+  top: 0;
+  background: transparent;
+  border: none;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -60,6 +71,7 @@ $seconday-text-color: #47337D;;
 }
 
 .nav {
+  padding-bottom: 3px;
   min-height: $header-height;
   height: $header-height;
   position: fixed;
@@ -144,6 +156,9 @@ $seconday-text-color: #47337D;;
   flex-basis: 70%;
   font-size: 25px;
   padding-left: 15px;
+  a {
+    text-decoration: none;
+  }
 }
 
 #portal-contact-footer {
