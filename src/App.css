@@ -3,6 +3,15 @@ body {
   body button:focus {
     outline: none; }
 
+.main {
+  min-height: 100vh;
+  /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 60px;
+  /* height of your footer */ }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -118,9 +127,7 @@ body {
   background-color: #407BA0;
   color: white;
   height: 60px;
-  width: 100%;
-  position: fixed;
-  bottom: 0px; }
+  width: 100%; }
   #footer a {
     color: white; }
 

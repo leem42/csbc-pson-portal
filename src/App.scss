@@ -5,6 +5,16 @@ body {
     outline: none;
   }
 }
+
+// this pushes the footer to the bottom of the screen
+.main {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 60px; /* height of your footer */
+}
+
 // utilities
 .uppercase {
   text-transform: uppercase;
@@ -162,8 +172,6 @@ $seconday-text-color: #47337D;;
   }
   height: 60px;
   width: 100%;
-  position: fixed;
-  bottom: 0px;
 }
 
 .SRC-primary-text-color {
@@ -255,6 +263,7 @@ $seconday-text-color: #47337D;;
         border-top-color: $bg-color;
       }
     }
+    // caret dropdown
     &.active-button::after {
       border-right: solid 12px;
       border-left: solid 12px;
