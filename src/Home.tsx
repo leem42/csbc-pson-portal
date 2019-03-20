@@ -17,6 +17,9 @@ class Home extends React.Component<{}, HomeState> {
     }
   }
 
+  /* This sets the synapse config from the corresponding click event
+     of the explore buttons
+  */
   handleChange = (name: string) => {
     const activeSynObject = (synapseConfigs as any)[name.toLowerCase()]
     this.setState({
