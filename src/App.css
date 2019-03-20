@@ -152,6 +152,7 @@ body {
   margin-bottom: 10px; }
 
 .explore-buttons {
+  margin-top: 30px;
   text-transform: uppercase;
   display: flex;
   align-content: center;
