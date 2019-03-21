@@ -1,22 +1,22 @@
 import { SynapseConstants } from 'synapse-react-client'
 
-const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`
+const sql = `SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantType" = 'U01' ) AND ( "Consortium" = 'PS-ON' OR "Consortium" = 'CSBC' OR "Consortium" = 'PS-ON,CSBC' ) )`
 
 export const publications = {
   name: 'publications',
   type: SynapseConstants.CSBC_PROJECT,
   menuConfig: [
     {
-      facetName: 'consortium',
-      sql: `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`,
+      sql,
+      facetName: 'Consortium',
       facetAliases: {
         consortium: 'Program',
       },
       unitDescription: 'programs'
     },
     {
-      facetName: 'grantType',
-      sql: `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`,
+      sql,
+      facetName: 'Consortium',
       facetAliases: {
         grantType: 'Grant Type',
       },
@@ -25,7 +25,7 @@ export const publications = {
   ],
   rgbIndex: 0,
   unitDescription: 'publications',
-  facetName: 'grantType',
+  facetName: 'Consortium',
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
     partMask:
