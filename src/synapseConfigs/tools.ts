@@ -23,7 +23,7 @@ export const tools = {
       unitDescription: 'tools'
     }
   ],
-  rgbIndex: 0,
+  rgbIndex: 6,
   unitDescription: 'tools',
   facetName: 'grantType',
   initQueryRequest : {
