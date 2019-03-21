@@ -7,23 +7,23 @@ export const grants = {
   type: SynapseConstants.CSBC_PROJECT,
   menuConfig: [
     {
+      sql,
       facetName: 'consortium',
-      sql: `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`,
       facetAliases: {
         consortium: 'Program',
       },
       unitDescription: 'programs'
     },
     {
+      sql,
       facetName: 'grantType',
-      sql: `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`,
       facetAliases: {
         grantType: 'Grant Type',
       },
       unitDescription: 'grants'
     }
   ],
-  rgbIndex: 0,
+  rgbIndex: 3,
   unitDescription: 'grants',
   facetName: 'grantType',
   initQueryRequest : {

@@ -45,8 +45,8 @@ $seconday-text-color: #47337D;;
   color: white;
 }
 
-.SRC-primary-background-color-hover.SRC-nested-color:hover {
-  background: $seconday-text-color;
+.SRC-primary-background-color-hover.SRC-nested-color:hover * {
+  background-color: $seconday-text-color !important;
   color: white;
 }
 

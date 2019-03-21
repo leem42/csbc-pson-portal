@@ -8,22 +8,62 @@ export const publications = {
   menuConfig: [
     {
       sql,
-      facetName: 'Consortium',
+      facetName: 'diseaseType',
       facetAliases: {
-        consortium: 'Program',
+        diseaseType: 'Disease Type',
       },
-      unitDescription: 'programs'
+      unitDescription: 'diseases'
+    },
+    {
+      sql,
+      facetName: 'experimentalStrategy',
+      facetAliases: {
+        experimentalStrategy: 'Experimental',
+      },
+      unitDescription: 'strategies'
+    },
+    {
+      sql,
+      facetName: 'site',
+      facetAliases: {
+        site: 'Site',
+      },
+      unitDescription: 'sites'
+    },
+    {
+      sql,
+      facetName: 'tissue_or_organ',
+      facetAliases: {
+        tissue_or_organ: 'Tissue',
+      },
+      unitDescription: 'Tissue'
+    },
+    {
+      sql,
+      facetName: 'year',
+      facetAliases: {
+        year: 'Year',
+      },
+      unitDescription: 'years'
     },
     {
       sql,
       facetName: 'Consortium',
       facetAliases: {
+        Consortium: 'Program',
+      },
+      unitDescription: 'programs'
+    },
+    {
+      sql,
+      facetName: 'grantType',
+      facetAliases: {
         grantType: 'Grant Type',
       },
-      unitDescription: 'publications'
+      unitDescription: 'grants'
     }
   ],
-  rgbIndex: 0,
+  rgbIndex: 1,
   unitDescription: 'publications',
   facetName: 'Consortium',
   initQueryRequest : {

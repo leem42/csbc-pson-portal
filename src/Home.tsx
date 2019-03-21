@@ -36,7 +36,7 @@ class Home extends React.Component<{}, HomeState> {
       unitDescription,
       facetAliases
     } = activeSynObject
-    const isSelected = (val: string) => { return val.toLowerCase() === activeSynObject.name ? 'active-button' : '' }
+    const isSelected = (val: string) => val.toLowerCase() === activeSynObject.name
     return (
       <div>
         <Header/>
