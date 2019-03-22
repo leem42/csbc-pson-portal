@@ -298,3 +298,35 @@ $seconday-text-color: #47337D;;
   }
 }
 // end ExploreButtons
+
+// exploreData button
+
+#exploreData {
+  bottom: 40px;
+  right: 30px;
+  position: absolute;
+  border-radius: 24px;
+  background-color: $seconday-text-color;
+  position: absolute;
+  color: white;
+  height: 44px;
+  width: 257px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+// end exploreData button
+#homePageBarChart {
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.homeExploreContainer {
+  position: relative; 
+  height: 220px;
+}

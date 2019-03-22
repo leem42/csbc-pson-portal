@@ -3,7 +3,7 @@ import { SynapseConstants } from 'synapse-react-client'
 const sql = `SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantType" = 'U01' ) AND ( "Consortium" = 'PS-ON' OR "Consortium" = 'CSBC' OR "Consortium" = 'PS-ON,CSBC' ) )`
 
 export const publications = {
-  name: 'publications',
+  name: 'Publications',
   type: SynapseConstants.CSBC_PUBLICATION,
   menuConfig: [
     {

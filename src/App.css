@@ -221,3 +221,29 @@ body {
       left: 50%;
       height: 0;
       width: 0; }
+
+#exploreData {
+  bottom: 40px;
+  right: 30px;
+  position: absolute;
+  border-radius: 24px;
+  background-color: #47337D;
+  position: absolute;
+  color: white;
+  height: 44px;
+  width: 257px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; }
+
+#homePageBarChart {
+  position: absolute;
+  right: 0;
+  width: 100%; }
+
+.homeExploreContainer {
+  position: relative;
+  height: 220px; }
