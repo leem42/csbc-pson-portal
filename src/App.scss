@@ -81,7 +81,6 @@ $seconday-text-color: #47337D;;
   height: 67px;
   a:hover {
     text-decoration: none;
-    color: $seconday-text-color;
   }
   a:focus {
     text-decoration: none;
@@ -142,6 +141,10 @@ $seconday-text-color: #47337D;;
   color: #515359;
   padding-left: 20px;
   height: 37px;
+}
+
+.dropdown-link:hover {
+  color: white;
 }
 
 // bootstrap override

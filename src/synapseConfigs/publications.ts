@@ -4,7 +4,7 @@ const sql = `SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantTy
 
 export const publications = {
   name: 'publications',
-  type: SynapseConstants.CSBC_PROJECT,
+  type: SynapseConstants.CSBC_PUBLICATION,
   menuConfig: [
     {
       sql,
