@@ -3,7 +3,7 @@ import { SynapseConstants } from 'synapse-react-client'
 const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`
 
 export const studies = {
-  name: 'studies',
+  name: 'Studies',
   type: SynapseConstants.CSBC_PROJECT,
   menuConfig: [
     {

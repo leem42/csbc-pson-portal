@@ -20,11 +20,17 @@ export function Navbar() {
     return hash.includes(path) ? 'bottom-border' : ''
   }
 
+  const goToTop = (_event:any) => { window.scroll({ top: 0, behavior: 'smooth' }) }
   return (
     <React.Fragment>
       <nav className="flex-display nav">
+        {
+          isDropdownOpen
+          &&
+          <span onClick={toggleDropdown} className="menu-wall hand-cursor"/>
+        }
         <div className="center-content nav-logo-container">
-          <Link to="/" id="home-link"> CSBC / PS-ON </Link>
+          <Link onClick={goToTop} to="/" id="home-link"> CSBC / PS-ON </Link>
         </div>
         <div className="center-content nav-link-container">
           <Link className={`center-content quarter-flex-basis nav-button ${getBorder('')}`} to="/"> Home </Link>

@@ -15,6 +15,8 @@ export default class Explore extends React.Component<{}, {}> {
     switch (hash) {
       case '#/Explore/Grants':
         return synapseConfigs['grants']
+      case '#/Explore/Publications':
+        return synapseConfigs['publications']
       default:
         console.error('getPropsFromHash failed')
         return {}
@@ -23,13 +25,13 @@ export default class Explore extends React.Component<{}, {}> {
 
   render () {
     const props = this.getPropsFromHash()
-    const fn = (val: string) => { console.log(val) }
-    const isSelected = (val: string) => 'hello'
+    const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
+    const isSelected = (val: string) => val === window.location.hash.substring('#/Explore/'.length)
     return (
       <div className="container">
         <ExploreButtons
           isSelected={isSelected}
-          handleChanges={fn}
+          handleChanges={handleChanges}
         />
         <SynapseComponents.QueryWrapperMenu
           {...props}

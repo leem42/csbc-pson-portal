@@ -3,7 +3,7 @@ import * as React from 'react'
 type HandleChanges = (text: string) => void
 type ExploreButtonProps = {
   handleChanges: HandleChanges
-  isSelected: (val: string) => string
+  isSelected: (val: string) => boolean
 }
 
 export const ExploreButtons: React.SFC<ExploreButtonProps> = ({ handleChanges, isSelected }) => {
@@ -13,21 +13,22 @@ export const ExploreButtons: React.SFC<ExploreButtonProps> = ({ handleChanges, i
   const handleStudies = () => handleChanges('Studies')
   const handleDatasets = () => handleChanges('Datasets')
   const handleTools = () => handleChanges('Tools')
+  const setActiveClass = (isSelected: boolean) => isSelected ? 'active-button' : ''
   return (
     <div className="explore-buttons">
-      <button className={`${isSelected('Grants')}`} onClick={handleGrants}>
+      <button className={`${setActiveClass(isSelected('Grants'))}`} onClick={handleGrants}>
         Grants
       </button>
-      <button className={isSelected('Publications')} onClick={handlePublications}>
+      <button className={setActiveClass(isSelected('Publications'))} onClick={handlePublications}>
       Publications
       </button>
-      <button className={isSelected('Studies')} onClick={handleStudies}>
+      <button className={setActiveClass(isSelected('Studies'))} onClick={handleStudies}>
         Studies
       </button>
-      <button className={isSelected('Datasets')} onClick={handleDatasets}>
+      <button className={setActiveClass(isSelected('Datasets'))} onClick={handleDatasets}>
         Datasets
       </button>
-      <button className={isSelected('Tools')} onClick={handleTools}>
+      <button className={setActiveClass(isSelected('Tools'))} onClick={handleTools}>
         Tools
       </button>
     </div>

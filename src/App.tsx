@@ -12,7 +12,7 @@ const App: React.SFC<{}> = ({}) => (
     {/* hash router requires a single child, so we wrap everything in a React.Fragment */}
     <React.Fragment>
       <Navbar/>
-      <main>
+      <main className="main">
         {/* all the content below */}
         <React.Suspense fallback={<div/>}>
           <Switch>

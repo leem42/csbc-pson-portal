@@ -3,7 +3,7 @@ import { SynapseConstants } from 'synapse-react-client'
 const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`
 
 export const tools = {
-  name: 'tools',
+  name: 'Tools',
   type: SynapseConstants.CSBC_PROJECT,
   menuConfig: [
     {
@@ -23,7 +23,7 @@ export const tools = {
       unitDescription: 'tools'
     }
   ],
-  rgbIndex: 0,
+  rgbIndex: 6,
   unitDescription: 'tools',
   facetName: 'grantType',
   initQueryRequest : {
