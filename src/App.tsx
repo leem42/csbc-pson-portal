@@ -3,14 +3,14 @@ import * as React from 'react'
 import './App.css'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
+import ScrollToTop from './ScrollToTop'
 const Home = React.lazy(() => import('./Home'))
 const Explore = React.lazy(() => import('./Explore'))
 const About = React.lazy(() => import('./About'))
 
 const App: React.SFC<{}> = ({}) => (
   <HashRouter>
-    {/* hash router requires a single child, so we wrap everything in a React.Fragment */}
-    <React.Fragment>
+    <ScrollToTop>
       <Navbar/>
       <main className="main">
         {/* all the content below */}
@@ -23,7 +23,7 @@ const App: React.SFC<{}> = ({}) => (
         </React.Suspense>
       </main>
       <Footer/>
-    </React.Fragment>
+    </ScrollToTop>
   </HashRouter >
 )
 
