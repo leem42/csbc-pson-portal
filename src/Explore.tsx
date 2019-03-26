@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SynapseComponents, SynapseConstants } from 'synapse-react-client'
+import { SynapseComponents } from 'synapse-react-client'
 import { synapseConfigs } from './synapseConfigs'
 import { ExploreButtons } from './ExploreButtons'
 

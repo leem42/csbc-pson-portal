@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Header } from './Header'
 import { synapseConfigs } from './synapseConfigs'
 import { ExploreButtons } from './ExploreButtons'
-import { SynapseComponents } from 'synapse-react-client'
+import { SynapseComponents, SynapseConstants } from 'synapse-react-client'
 import { Link } from 'react-router-dom'
 
 type HomeState = {
@@ -62,6 +62,16 @@ class Home extends React.Component<{}, HomeState> {
               </SynapseComponents.QueryWrapper>
             </div>
             <Link to={`/Explore/${this.state.activeSynObject.name}`} id="exploreData"> Explore Data </Link>
+          </div>
+
+          <div className="newContainer">
+            <h2 className="title"> NEW PUBLICATIONS </h2>
+            <SynapseComponents.CardContainerLogic
+              type={SynapseConstants.CSBC_PUBLICATION}
+              sql={`SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantType" = 'U01' ) AND ( "Consortium" = 'PS-ON' OR "Consortium" = 'CSBC' OR "Consortium" = 'PS-ON,CSBC' ) )`}
+              limit={3}
+            />
+            <Link to={'/Explore/Publications'} className="viewAll center-content"> View All </Link>
           </div>
         </div>
       </div>

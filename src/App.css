@@ -247,3 +247,25 @@ body {
 .homeExploreContainer {
   position: relative;
   height: 220px; }
+
+.title {
+  font-weight: bold;
+  font-size: 21px; }
+
+.newContainer {
+  position: relative; }
+
+.viewAll {
+  border-radius: 24px;
+  background-color: #DFDFDF;
+  color: black;
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  justify-content: center; }
+  .viewAll:hover {
+    background-color: #47337D;
+    color: white;
+    text-decoration: none; }

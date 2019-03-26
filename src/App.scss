@@ -330,3 +330,31 @@ $seconday-text-color: #47337D;;
   position: relative; 
   height: 220px;
 }
+
+// title
+.title {
+  font-weight: bold;
+  font-size: 21px;
+}
+// end title
+
+.newContainer {
+  position: relative;
+}
+
+.viewAll {
+  border-radius: 24px;
+  background-color: #DFDFDF;
+  color: black;
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+  &:hover {
+    background-color: $seconday-text-color;
+    color: white;
+    text-decoration: none;
+  }
+}
