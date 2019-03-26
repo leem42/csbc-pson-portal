@@ -44,13 +44,20 @@ body {
 .flex-display {
   display: flex; }
 
+.nav-button:hover, .viewAll:hover, .SRC-viewMoreButton:hover {
+  transition: all 400ms; }
+
 .nav-logo-container {
   flex-basis: 50%; }
 
 .nav-link-container {
   flex-basis: 50%;
   display: flex;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  padding-right: 40px; }
+  @media screen and (max-width: 520px) {
+    .nav-link-container {
+      padding-right: 0px; } }
 
 .nav {
   padding-bottom: 3px;
@@ -77,7 +84,10 @@ body {
   color: #404B63;
   text-decoration: none;
   padding: 0px 40px;
-  min-width: 100px; }
+  min-width: 100px;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: transparent; }
 
 .quarter-flex-basis {
   flex-basis: 50%; }
@@ -86,7 +96,6 @@ body {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: #47337D;
-  margin-bottom: -3px;
   color: #47337D; }
 
 .bottom-border {

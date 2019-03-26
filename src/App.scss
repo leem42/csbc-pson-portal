@@ -58,6 +58,11 @@ $primary-action-color: #47337D;
 .flex-display {
   display: flex;
 }
+// avoid having to rewrite this everywhere
+%hoverFade {
+  transition: all 400ms;
+}
+
 
 // end utilities
 
@@ -70,6 +75,10 @@ $primary-action-color: #47337D;
   flex-basis: 50%;
   display: flex;
   flex-direction: row-reverse;
+  padding-right: 40px;
+  @media screen and (max-width: 520px) {
+    padding-right: 0px;
+  }
 }
 
 .nav {
@@ -101,16 +110,20 @@ $primary-action-color: #47337D;
   text-decoration: none;
   padding: 0px 40px;
   min-width: 100px;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color:transparent;
 }
 
 .quarter-flex-basis {
   flex-basis: 50%;
 }
 .nav-button:hover {
+  @extend %hoverFade;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color:#47337D;
-  margin-bottom: -3px;
+  // margin-bottom: -3px;
   color: $primary-action-color;
 }
 
@@ -361,6 +374,7 @@ $primary-action-color: #47337D;
   text-align: center;
   justify-content: center;
   &:hover {
+    @extend %hoverFade;
     background-color: $primary-action-color;
     color: white;
     text-decoration: none;
@@ -374,3 +388,9 @@ $primary-action-color: #47337D;
 }
 
 // end home page utils
+
+// override src view more
+
+.SRC-viewMoreButton:hover {
+  @extend %hoverFade;
+}
