@@ -48,7 +48,9 @@ body {
   flex-basis: 50%; }
 
 .nav-link-container {
-  flex-basis: 50%; }
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row-reverse; }
 
 .nav {
   padding-bottom: 3px;
@@ -73,10 +75,12 @@ body {
   text-align: center;
   justify-content: center;
   color: #404B63;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 0px 40px;
+  min-width: 100px; }
 
 .quarter-flex-basis {
-  flex-basis: 25%; }
+  flex-basis: 50%; }
 
 .nav-button:hover {
   border-bottom-style: solid;
@@ -140,6 +144,8 @@ body {
   background-image: url("./assets/dna.svg");
   background-blend-mode: multiply;
   background-color: #407BA0;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   height: 60px;
   width: 100%; }
@@ -158,6 +164,8 @@ body {
 #header {
   background-image: url("./assets/dna_header.svg");
   background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #407BA0;
   height: 326px; }
 
@@ -178,12 +186,12 @@ body {
   text-transform: uppercase;
   display: flex;
   align-content: center;
-  justify-content: left; }
+  justify-content: center; }
   .explore-buttons button {
     text-transform: uppercase;
     border-radius: 16px;
     flex-basis: 18%;
-    margin: 0px 4px;
+    margin: 0px 16px;
     border: none;
     position: relative;
     height: 50px;
@@ -198,9 +206,9 @@ body {
       .explore-buttons button:nth-child(2).active-button::after {
         border-top-color: #407BA0; }
     .explore-buttons button:nth-child(3) {
-      background: #82A6BC; }
+      background: #7798AC; }
       .explore-buttons button:nth-child(3).active-button::after {
-        border-top-color: #82A6BC; }
+        border-top-color: #7798AC; }
     .explore-buttons button:nth-child(4) {
       background: #77BBBF; }
       .explore-buttons button:nth-child(4).active-button::after {
@@ -269,3 +277,8 @@ body {
     background-color: #47337D;
     color: white;
     text-decoration: none; }
+
+.bar-loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; }
