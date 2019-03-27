@@ -15,5 +15,5 @@ class ScrollToTop extends React.Component {
     return this.props.children
   }
 }
-
+// @ts-ignorex
 export default withRouter(ScrollToTop)

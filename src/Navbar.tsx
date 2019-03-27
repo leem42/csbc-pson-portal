@@ -32,9 +32,11 @@ export function Navbar() {
         <div className="center-content nav-logo-container">
           <Link onClick={goToTop} to="/" id="home-link"> CSBC / PS-ON </Link>
         </div>
-        <div className="center-content nav-link-container">
-          <Link className={`center-content quarter-flex-basis nav-button ${getBorder('')}`} to="/"> Home </Link>
-          <div className={`dropdown quarter-flex-basis ${isDropdownOpen ? 'open' : ''} ${getBorder('Explore')}`}>
+        <div className="nav-link-container">
+          {/*
+            TODO: Add these back in if completed
+          */}
+          {/* <div className={`dropdown quarter-flex-basis ${isDropdownOpen ? 'open' : ''} ${getBorder('Explore')}`}>
             <div onClick={toggleDropdown} className="center-content nav-button hand-cursor"> Explore </div>
             {isDropdownOpen
               &&
@@ -83,9 +85,10 @@ export function Navbar() {
                 </Link>
               </div>
             }
-          </div>
-          <Link className={`center-content quarter-flex-basis nav-button ${getBorder('Programs')}`} to="/Programs"> Programs </Link>
-          <Link className={`center-content quarter-flex-basis nav-button ${getBorder('About')}`} to="/About"> About </Link>
+          </div> */}
+          {/* <Link className={`center-content quarter-flex-basis nav-button ${getBorder('Programs')}`} to="/Programs"> Programs </Link> */}
+          <Link className={`center-content nav-button ${getBorder('About')}`} to="/About"> About </Link>
+          <Link className={`center-content nav-button ${getBorder('')}`} to="/"> Home </Link>
         </div>
       </nav>
       <div className="spacer"/>

@@ -6,7 +6,7 @@ export const Header: React.SFC<{}> = () => {
       <div id="header" className="center-content">
         <div className="header-text">
           <h2>
-            CSBC PS-ON Portal
+          Cancer Systems Biology Consortium and Physical Sciences in Oncology Network
           </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,

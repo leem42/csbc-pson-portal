@@ -4,6 +4,7 @@ import { synapseConfigs } from './synapseConfigs'
 import { ExploreButtons } from './ExploreButtons'
 import { SynapseComponents, SynapseConstants } from 'synapse-react-client'
 import { Link } from 'react-router-dom'
+import { BarLoader } from 'react-spinners'
 
 type HomeState = {
   activeSynObject: any
@@ -57,11 +58,11 @@ class Home extends React.Component<{}, HomeState> {
                 facetAliases={facetAliases}
               >
                 <SynapseComponents.StackedBarChart
-                  loadingScreen={<div/>}
+                  loadingScreen={<div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>}
                 />
               </SynapseComponents.QueryWrapper>
             </div>
-            <Link to={`/Explore/${this.state.activeSynObject.name}`} id="exploreData"> Explore Data </Link>
+            <Link to={`/Explore/${this.state.activeSynObject.name}`} id="exploreData"> Explore {this.state.activeSynObject.name} </Link>
           </div>
 
           <div className="newContainer">

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { SynapseComponents } from 'synapse-react-client'
 import { synapseConfigs } from './synapseConfigs'
 import { ExploreButtons } from './ExploreButtons'
+import { BarLoader } from 'react-spinners'
 
 export default class Explore extends React.Component<{}, {}> {
 
@@ -34,6 +35,7 @@ export default class Explore extends React.Component<{}, {}> {
           handleChanges={handleChanges}
         />
         <SynapseComponents.QueryWrapperMenu
+          loadingScreen={<div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>}
           {...props}
         />
       </div>
