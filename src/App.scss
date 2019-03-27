@@ -233,14 +233,18 @@ $primary-action-color: #47337D;
   background-size: cover;
   background-color: #407BA0;;
   height: 326px;
+  padding: 40px;
 }
 
 .header-text {
-  margin: 40px;
+  height: 220px;
   padding: 30px;
   color: white;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  @media screen and (max-width: 768px ) {
+    padding: 10px;
+  }
 }
 // end header
 
