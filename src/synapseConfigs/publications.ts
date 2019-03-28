@@ -1,70 +1,57 @@
 import { SynapseConstants } from 'synapse-react-client'
 
 const sql = `SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantType" = 'U01' ) AND ( "Consortium" = 'PS-ON' OR "Consortium" = 'CSBC' OR "Consortium" = 'PS-ON,CSBC' ) )`
+const unitDescription = 'Publications'
 
 export const publications = {
+  unitDescription,
   name: 'Publications',
   type: SynapseConstants.CSBC_PUBLICATION,
   menuConfig: [
     {
+      unitDescription,
       sql,
-      facetName: 'diseaseType',
-      facetAliases: {
-        diseaseType: 'Disease Type',
-      },
-      unitDescription: 'diseases'
+      facetName: 'Publication Year',
     },
     {
       sql,
-      facetName: 'experimentalStrategy',
-      facetAliases: {
-        experimentalStrategy: 'Experimental',
-      },
-      unitDescription: 'strategies'
-    },
-    {
-      sql,
-      facetName: 'site',
-      facetAliases: {
-        site: 'Site',
-      },
-      unitDescription: 'sites'
-    },
-    {
-      sql,
-      facetName: 'tissue_or_organ',
-      facetAliases: {
-        tissue_or_organ: 'Tissue',
-      },
-      unitDescription: 'Tissue'
-    },
-    {
-      sql,
-      facetName: 'year',
-      facetAliases: {
-        year: 'Year',
-      },
-      unitDescription: 'years'
-    },
-    {
-      sql,
+      unitDescription,
       facetName: 'Consortium',
       facetAliases: {
         Consortium: 'Program',
       },
-      unitDescription: 'programs'
     },
     {
       sql,
+      unitDescription,
       facetName: 'grantType',
       facetAliases: {
         grantType: 'Grant Type',
       },
-      unitDescription: 'grants'
-    }
+    },
+    {
+      sql,
+      unitDescription,
+      facetName: 'diseaseType',
+      facetAliases: {
+        diseaseType: 'Disease',
+      },
+    },
+    {
+      sql,
+      unitDescription,
+      facetName: 'Theme',
+    },
+    {
+      sql,
+      unitDescription,
+      facetName: 'experimentalStrategy',
+      facetAliases: {
+        experimentalStrategy: 'Experimental Strategy',
+      },
+    },
   ],
   rgbIndex: 1,
-  unitDescription: 'publications',
   facetName: 'Consortium',
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',

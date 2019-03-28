@@ -28,8 +28,11 @@ export default class Explore extends React.Component<{}, {}> {
     const props = this.getPropsFromHash()
     const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
     const isSelected = (val: string) => val === window.location.hash.substring('#/Explore/'.length)
+    const isOnPublications = window.location.hash.includes('Publications')
+    // adding this class lets us target in the css the Experimental Strategy div to enlarge it
+    const optionalPubClass = isOnPublications ? 'publication' : ''
     return (
-      <div className="container">
+      <div className={`container ${optionalPubClass}`}>
         <ExploreButtons
           isSelected={isSelected}
           handleChanges={handleChanges}

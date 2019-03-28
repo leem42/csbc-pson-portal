@@ -37,7 +37,7 @@ body {
 }
 
 $header-height : 75px;
-$primary-text-color: #404B63;
+$primary-text-color: #407BA0;
 $primary-action-color: #47337D;
 
 .SRC-primary-background-color-hover:hover {
@@ -87,7 +87,7 @@ $primary-action-color: #47337D;
   height: $header-height;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   background: white;
   height: 67px;
   a:hover {
@@ -106,7 +106,7 @@ $primary-action-color: #47337D;
   font-size: 16px;
   text-align: center;
   justify-content: center;
-  color: $primary-text-color;
+  color: #404B63;
   text-decoration: none;
   padding: 0px 40px;
   min-width: 100px;
@@ -173,7 +173,7 @@ $primary-action-color: #47337D;
 
 // footer
 #portal-title-footer {
-  flex-basis: 70%;
+  flex-basis: 50%;
   font-size: 25px;
   padding-left: 15px;
   a {
@@ -182,13 +182,13 @@ $primary-action-color: #47337D;
 }
 
 #portal-contact-footer {
-  flex-basis: 30%;
+  flex-basis: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .footer-link {
-  flex-basis: 50%;
+  padding: 0px 30px;
 }
 
 
@@ -212,11 +212,7 @@ $primary-action-color: #47337D;
 }
 
 .SRC-primary-text-color {
-  color: $primary-action-color !important;
-}
-
-.SRC-portalCard a {
-  color: $primary-action-color !important;
+  color: $primary-text-color !important;
 }
 
 .footer-help {
@@ -227,6 +223,7 @@ $primary-action-color: #47337D;
 
 // header
 #header {
+  font-weight: bold;
   background-image: url("./assets/dna_header.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -328,7 +325,7 @@ $primary-action-color: #47337D;
 
 #exploreData {
   bottom: 40px;
-  right: 30px;
+  right: 50px;
   position: absolute;
   border-radius: 24px;
   background-color: $primary-action-color;
@@ -397,4 +394,13 @@ $primary-action-color: #47337D;
 
 .SRC-viewMoreButton:hover {
   @extend %hoverFade;
+}
+
+// The facet 'Experimental Strategy' is too large to fit in the div
+// this gives more space and centers the text
+.publication div.SRC-menu:last-child {
+  height: 60px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
 }
