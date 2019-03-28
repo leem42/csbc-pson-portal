@@ -227,6 +227,7 @@ $primary-action-color: #47337D;
 
 // header
 #header {
+  font-weight: bold;
   background-image: url("./assets/dna_header.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -397,4 +398,13 @@ $primary-action-color: #47337D;
 
 .SRC-viewMoreButton:hover {
   @extend %hoverFade;
+}
+
+// The facet 'Experimental Strategy' is too large to fit in the div
+// this gives more space and centers the text
+.publication div.SRC-menu:last-child {
+  height: 60px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
 }

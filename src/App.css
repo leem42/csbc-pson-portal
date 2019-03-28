@@ -171,6 +171,7 @@ body {
   flex-basis: 50%; }
 
 #header {
+  font-weight: bold;
   background-image: url("./assets/dna_header.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -295,3 +296,9 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px; }
+
+.publication div.SRC-menu:last-child {
+  height: 60px;
+  line-height: 25px;
+  display: flex;
+  align-items: center; }
