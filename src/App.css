@@ -65,7 +65,7 @@ body {
   height: 75px;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   background: white;
   height: 67px; }
   .nav a:hover {
@@ -131,19 +131,19 @@ body {
   border-radius: 0%; }
 
 #portal-title-footer {
-  flex-basis: 70%;
+  flex-basis: 50%;
   font-size: 25px;
   padding-left: 15px; }
   #portal-title-footer a {
     text-decoration: none; }
 
 #portal-contact-footer {
-  flex-basis: 30%;
+  flex-basis: 50%;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row-reverse; }
 
 .footer-link {
-  flex-basis: 50%; }
+  padding: 0px 30px; }
 
 .hand-cursor {
   cursor: pointer; }

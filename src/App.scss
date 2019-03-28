@@ -87,7 +87,7 @@ $primary-action-color: #47337D;
   height: $header-height;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   background: white;
   height: 67px;
   a:hover {
@@ -173,7 +173,7 @@ $primary-action-color: #47337D;
 
 // footer
 #portal-title-footer {
-  flex-basis: 70%;
+  flex-basis: 50%;
   font-size: 25px;
   padding-left: 15px;
   a {
@@ -182,13 +182,13 @@ $primary-action-color: #47337D;
 }
 
 #portal-contact-footer {
-  flex-basis: 30%;
+  flex-basis: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .footer-link {
-  flex-basis: 50%;
+  padding: 0px 30px;
 }
 
 
