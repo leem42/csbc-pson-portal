@@ -37,7 +37,7 @@ body {
 }
 
 $header-height : 75px;
-$primary-text-color: #404B63;
+$primary-text-color: #407BA0;
 $primary-action-color: #47337D;
 
 .SRC-primary-background-color-hover:hover {
@@ -106,7 +106,7 @@ $primary-action-color: #47337D;
   font-size: 16px;
   text-align: center;
   justify-content: center;
-  color: $primary-text-color;
+  color: #404B63;
   text-decoration: none;
   padding: 0px 40px;
   min-width: 100px;
@@ -212,11 +212,7 @@ $primary-action-color: #47337D;
 }
 
 .SRC-primary-text-color {
-  color: $primary-action-color !important;
-}
-
-.SRC-portalCard a {
-  color: $primary-action-color !important;
+  color: $primary-text-color !important;
 }
 
 .footer-help {
@@ -329,7 +325,7 @@ $primary-action-color: #47337D;
 
 #exploreData {
   bottom: 40px;
-  right: 30px;
+  right: 50px;
   position: absolute;
   border-radius: 24px;
   background-color: $primary-action-color;

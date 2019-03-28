@@ -25,7 +25,7 @@ export const studies = {
       }
     }
   ],
-  rgbIndex: 0,
+  rgbIndex: 1,
   facetName: 'grantType',
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
