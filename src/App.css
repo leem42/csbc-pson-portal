@@ -25,6 +25,9 @@ body {
 .uppercase {
   text-transform: uppercase; }
 
+.normal-weight {
+  font-weight: normal; }
+
 .center-content {
   display: flex;
   align-items: center; }
@@ -174,18 +177,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #407BA0;
-  height: 326px;
+  height: fit-content;
   padding: 40px; }
 
 .header-text {
-  height: 220px;
+  height: fit-content;
   padding: 30px;
   color: white;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px); }
-  @media screen and (max-width: 768px) {
-    .header-text {
-      padding: 10px; } }
 
 #explore-portal {
   font-size: 21px;
@@ -293,6 +293,9 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px; }
+
+div.SRC-title > h3 a {
+  color: #407BA0; }
 
 .publication div.SRC-menu:last-child {
   height: 60px;

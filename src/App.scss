@@ -31,6 +31,10 @@ body {
   text-transform: uppercase;
 }
 
+.normal-weight {
+  font-weight: normal;
+}
+
 .center-content {
   display: flex;
   align-items: center;
@@ -229,19 +233,16 @@ $primary-action-color: #47337D;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #407BA0;;
-  height: 326px;
+  height: fit-content;
   padding: 40px;
 }
 
 .header-text {
-  height: 220px;
+  height: fit-content;
   padding: 30px;
   color: white;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  @media screen and (max-width: 768px ) {
-    padding: 10px;
-  }
 }
 // end header
 
@@ -394,6 +395,10 @@ $primary-action-color: #47337D;
 
 .SRC-viewMoreButton:hover {
   @extend %hoverFade;
+}
+
+div.SRC-title > h3 a {
+  color: $primary-text-color;
 }
 
 // The facet 'Experimental Strategy' is too large to fit in the div
