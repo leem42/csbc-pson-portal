@@ -1,6 +1,6 @@
 import { SynapseConstants } from 'synapse-react-client'
 
-const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01' )`
+const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01')`
 const unitDescription = 'grants'
 
 export const grants = {
@@ -33,6 +33,16 @@ export const grants = {
       SynapseConstants.BUNDLE_MASK_QUERY_COLUMN_MODELS
       | SynapseConstants.BUNDLE_MASK_QUERY_FACETS
       | SynapseConstants.BUNDLE_MASK_QUERY_RESULTS,
+    query: {
+      sql,
+      isConsistent: false,
+      limit: 25,
+      offset: 0,
+    }
+  },
+  countQuery : {
+    concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
+    partMask: SynapseConstants.BUNDLE_MASK_QUERY_COUNT,
     query: {
       sql,
       isConsistent: false,
