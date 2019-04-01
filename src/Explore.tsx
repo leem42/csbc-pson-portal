@@ -80,7 +80,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
   }
 
   render () {
-    const props = this.getSynapseConfigFromHash()
+    const config = this.getSynapseConfigFromHash()
     const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
     const subPath = window.location.hash.substring('#/Explore/'.length)
     const isSelected = (val: string) => val === subPath
@@ -88,7 +88,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
     // adding this class lets us target in the css the Experimental Strategy div to enlarge it
     const optionalPubClass = isOnPublications ? 'publication' : ''
     return (
-      <div className={`container ${optionalPubClass}`}>
+      <div className={`container explore ${optionalPubClass}`}>
         <h1 className="SRC-boldText">
           Explore
         </h1>
@@ -102,7 +102,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
         <hr/>
         <SynapseComponents.QueryWrapperMenu
           loadingScreen={<div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>}
-          {...props}
+          {...config}
         />
       </div>
     )

@@ -303,7 +303,14 @@ div.SRC-title > h3 a {
   height: 60px;
   line-height: 25px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 button.btn-sm.SRC-floatRight svg {
   color: #47337D !important; }
+
+.explore .container-fluid {
+  padding-left: 0px; }
+  .explore .container-fluid .col-xs-2 {
+    padding-left: 0px;
+    padding-right: 40px; }
