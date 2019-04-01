@@ -1,6 +1,6 @@
 import { SynapseConstants } from 'synapse-react-client'
 
-const sql = `SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantType" = 'U01' ) AND ( "Consortium" = 'PS-ON' OR "Consortium" = 'CSBC' OR "Consortium" = 'PS-ON,CSBC' ) )`
+const sql = 'SELECT * FROM syn10923842'
 const unitDescription = 'Publications'
 
 export const publications = {
@@ -59,6 +59,16 @@ export const publications = {
       SynapseConstants.BUNDLE_MASK_QUERY_COLUMN_MODELS
       | SynapseConstants.BUNDLE_MASK_QUERY_FACETS
       | SynapseConstants.BUNDLE_MASK_QUERY_RESULTS,
+    query: {
+      sql,
+      isConsistent: false,
+      limit: 25,
+      offset: 0,
+    }
+  },
+  countQuery : {
+    concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
+    partMask: SynapseConstants.BUNDLE_MASK_QUERY_COUNT,
     query: {
       sql,
       isConsistent: false,
