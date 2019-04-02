@@ -196,6 +196,7 @@ body {
 
 .explore-buttons {
   margin-top: 30px;
+  margin-bottom: 32px;
   text-transform: uppercase;
   display: flex;
   align-content: center;
