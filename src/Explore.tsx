@@ -99,7 +99,9 @@ export default class Explore extends React.Component<{}, ExploreState> {
         <h3 className="SRC-boldText">
           {subPath} ({this.state.currentCountQuery.queryCount})
         </h3>
-        <hr/>
+        <div className="break">
+          <hr/>
+        </div>
         <SynapseComponents.QueryWrapperMenu
           loadingScreen={<div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>}
           {...config}
