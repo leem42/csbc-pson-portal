@@ -414,8 +414,11 @@ div.SRC-title > h3 a {
 }
 
 // override src explore chart button color
-button.btn-sm.SRC-floatRight svg {
-  color: $primary-action-color !important;
+button.btn-sm.SRC-floatRight {
+  border: none;
+  svg {
+    color: $primary-action-color !important;
+  }
 }
 
 // this is used because https://sagebionetworks.jira.com/browse/PORTALS-379
@@ -427,5 +430,12 @@ button.btn-sm.SRC-floatRight svg {
       padding-left: 0px;
       padding-right: 40px;
     }
+    & .col-xs-10 {
+      margin-top: -30px;
+    }
   }
+}
+
+.break {
+  padding-right: 30px;
 }
