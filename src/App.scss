@@ -229,7 +229,6 @@ $primary-action-color: #47337D;
 
 // header
 #header {
-  font-weight: 700;
   background-image: url("./assets/dna_header.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -240,6 +239,9 @@ $primary-action-color: #47337D;
 }
 
 .header-text {
+  h2 {
+    font-weight: bold;
+  }
   height: fit-content;
   padding: 30px;
   color: white;

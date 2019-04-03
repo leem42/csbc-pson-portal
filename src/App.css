@@ -173,7 +173,6 @@ body {
   flex-basis: 50%; }
 
 #header {
-  font-weight: 700;
   background-image: url("./assets/dna_header.svg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -188,6 +187,8 @@ body {
   color: white;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px); }
+  .header-text h2 {
+    font-weight: bold; }
 
 #explore-portal {
   font-size: 21px;
