@@ -40,6 +40,9 @@ export const grants = {
       offset: 0,
     }
   },
+  facetAliases: {
+    grantType: 'Grant Type',
+  },
   countQuery : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
     partMask: SynapseConstants.BUNDLE_MASK_QUERY_COUNT,

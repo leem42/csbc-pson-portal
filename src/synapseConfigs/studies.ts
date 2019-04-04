@@ -57,6 +57,9 @@ export const studies = {
   ],
   rgbIndex: 1,
   facetName: 'grantType',
+  facetAliases: {
+    grantType: 'Grant Type',
+  },
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
     partMask:

@@ -54,6 +54,9 @@ export const publications = {
   ],
   rgbIndex: 1,
   facetName: 'Consortium',
+  facetAliases: {
+    Consortium: 'Program',
+  },
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
     partMask:
