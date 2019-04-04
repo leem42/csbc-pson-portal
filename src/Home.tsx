@@ -10,6 +10,8 @@ type HomeState = {
   activeSynObject: any
 }
 
+const CARD_LIMIT = 3
+
 class Home extends React.Component<{}, HomeState> {
 
   constructor(props: any) {
@@ -66,11 +68,21 @@ class Home extends React.Component<{}, HomeState> {
           </div>
 
           <div className="newContainer">
+            <h2 className="title"> NEW STUDIES </h2>
+            <SynapseComponents.CardContainerLogic
+              type={synapseConfigs.studies.type}
+              sql={synapseConfigs.studies.sql}
+              limit={CARD_LIMIT}
+            />
+            <Link to={'/Explore/Studies'} className="viewAll center-content"> View All </Link>
+          </div>
+
+          <div className="newContainer">
             <h2 className="title"> NEW PUBLICATIONS </h2>
             <SynapseComponents.CardContainerLogic
-              type={SynapseConstants.CSBC_PUBLICATION}
-              sql={`SELECT * FROM syn10923842 WHERE ( ( "grantType" = 'U54' OR "grantType" = 'U01' ) AND ( "Consortium" = 'PS-ON' OR "Consortium" = 'CSBC' OR "Consortium" = 'PS-ON,CSBC' ) )`}
-              limit={3}
+              type={synapseConfigs.publications.type}
+              sql={synapseConfigs.publications.sql}
+              limit={CARD_LIMIT}
             />
             <Link to={'/Explore/Publications'} className="viewAll center-content"> View All </Link>
           </div>
