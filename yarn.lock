@@ -10337,9 +10337,9 @@ symbol-tree@^3.2.1, symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
-synapse-react-client@1.11.12:
-  version "1.11.12"
-  resolved "https://registry.yarnpkg.com/synapse-react-client/-/synapse-react-client-1.11.12.tgz#81d74d55f784b8eba9db6bdf34d4b8c465bc448e"
+synapse-react-client@1.11.17:
+  version "1.11.17"
+  resolved "https://registry.yarnpkg.com/synapse-react-client/-/synapse-react-client-1.11.17.tgz#616e7c514d3a973cd070c63c2533540186ed40fe"
   dependencies:
     "@babel/runtime" "^7.1.5"
     "@fortawesome/fontawesome-svg-core" "^1.2.4"

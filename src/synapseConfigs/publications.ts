@@ -5,6 +5,7 @@ const unitDescription = 'Publications'
 
 export const publications = {
   unitDescription,
+  sql,
   name: 'Publications',
   type: SynapseConstants.CSBC_PUBLICATION,
   menuConfig: [
@@ -47,7 +48,7 @@ export const publications = {
       unitDescription,
       facetName: 'experimentalStrategy',
       facetAliases: {
-        experimentalStrategy: 'Experimental Strategy',
+        experimentalStrategy: 'Assay',
       },
     },
   ],

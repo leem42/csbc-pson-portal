@@ -73,6 +73,8 @@ export default class Explore extends React.Component<{}, ExploreState> {
         return synapseConfigs['grants']
       case '#/Explore/Publications':
         return synapseConfigs['publications']
+      case '#/Explore/Studies':
+        return synapseConfigs['studies']
       default:
         console.error('getPropsFromHash failed')
         return {}
