@@ -32,6 +32,9 @@ body {
   display: flex;
   align-items: center; }
 
+.SRC-primary-background-color {
+  background-color: #47337D !important; }
+
 .SRC-primary-background-color-hover:hover {
   background: #47337D !important;
   color: white !important; }

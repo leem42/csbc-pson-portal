@@ -88,6 +88,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
     const subPath = window.location.hash.substring('#/Explore/'.length)
     const isSelected = (val: string) => val === subPath
+    const { queryCount = '' } = this.state.currentCountQuery
     return (
       <div className={'container explore'}>
         <h1 className="SRC-boldText">
@@ -98,7 +99,8 @@ export default class Explore extends React.Component<{}, ExploreState> {
           handleChanges={handleChanges}
         />
         <h3 className="SRC-boldText">
-          {subPath} ({this.state.currentCountQuery.queryCount})
+          {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString#Using_toLocaleString */}
+          {subPath} ({queryCount && queryCount.toLocaleString()})
         </h3>
         <div className="break">
           <hr/>

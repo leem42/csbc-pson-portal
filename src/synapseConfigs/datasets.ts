@@ -1,7 +1,7 @@
 import { SynapseConstants } from 'synapse-react-client'
 
 // tslint:disable-next-line:max-line-length
-const sql = 'SELECT grantType AS "Grant Type", centerName AS "Grant", consortium AS "Program", species AS "Species", fileFormat AS "Data Format", experimentalStrategy AS "Assay", platform AS "Platform", tumorType AS "Disease Type", sex AS "Gender", tissue AS "Tissue" FROM syn9630847'
+const sql = 'SELECT grantType AS "Grant Type", centerName AS "Grant", consortium AS "Program", species AS "Species", fileFormat AS "Data Format", experimentalStrategy AS "Assay", platform AS "Platform", tumorType AS "Disease Type", sex AS "Gender", tissue AS "Tissue", name as "File Name"  FROM syn9630847'
 
 const facetAliases = {
   grantType: 'Grant Type',
@@ -13,7 +13,8 @@ const facetAliases = {
   platform: 'Platform',
   tumorType: 'Disease Type',
   sex: 'Gender',
-  tissue: 'Tissue'
+  tissue: 'Tissue',
+  name: 'File Name'
 }
 
 const unitDescription = 'datasets'

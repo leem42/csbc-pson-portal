@@ -44,6 +44,11 @@ $header-height : 75px;
 $primary-text-color: #407BA0;
 $primary-action-color: #47337D;
 
+
+.SRC-primary-background-color {
+  background-color: $primary-action-color !important;
+}
+
 .SRC-primary-background-color-hover:hover {
   background: $primary-action-color !important;
   color: white !important;
