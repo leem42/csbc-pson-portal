@@ -65,9 +65,9 @@ export function Navbar() {
                 <Link
                   onClick={toggleDropdown}
                   className="dropdown-link SRC-primary-background-color-hover SRC-nested-color center-content"
-                  to="/Explore/Datasets"
+                  to="/Explore/Data"
                 >
-                  Datasets
+                  Data
                 </Link>
                 <Link
                   onClick={toggleDropdown}

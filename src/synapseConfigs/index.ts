@@ -1,13 +1,13 @@
 import { grants } from './grants'
 import { publications } from './publications'
 import { tools } from './tools'
-import { datasets } from './datasets'
+import { data } from './data'
 import { studies } from './studies'
 
 export const synapseConfigs = {
   grants,
   publications,
   tools,
-  datasets,
+  data,
   studies
 }
