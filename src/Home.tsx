@@ -41,6 +41,8 @@ class Home extends React.Component<{}, HomeState> {
       facetAliases
     } = activeSynObject
     const isSelected = (val: string) => val === activeSynObject.name
+    const { name } = this.state.activeSynObject
+    const nameLinkLocation = name === 'Files' ? 'Data' : name
     return (
       <div>
         <Header/>
@@ -64,7 +66,7 @@ class Home extends React.Component<{}, HomeState> {
                 />
               </SynapseComponents.QueryWrapper>
             </div>
-            <Link to={`/Explore/${this.state.activeSynObject.name}`} id="exploreData"> Explore {this.state.activeSynObject.name} </Link>
+            <Link to={`/Explore/${nameLinkLocation}`} id="exploreData"> Explore {name} </Link>
           </div>
 
           <div className="newContainer">
