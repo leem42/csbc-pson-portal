@@ -34,11 +34,15 @@ body {
 
 .SRC-primary-background-color-hover:hover {
   background: #47337D !important;
-  color: white; }
+  color: white !important; }
+  .SRC-primary-background-color-hover:hover svg.SRC-primary-text-color {
+    color: white !important; }
+  .SRC-primary-background-color-hover:hover a.SRC-no-focus {
+    color: white; }
 
 .SRC-primary-background-color-hover.SRC-nested-color:hover * {
   background-color: #47337D !important;
-  color: white; }
+  color: white !important; }
 
 .spacer {
   min-height: 75px;
@@ -301,13 +305,6 @@ body {
 div.SRC-title > h3 a {
   color: #407BA0; }
 
-.publication div.SRC-menu:last-child {
-  height: 60px;
-  line-height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 button.btn-sm.SRC-floatRight {
   border: none; }
   button.btn-sm.SRC-floatRight svg {
@@ -320,6 +317,10 @@ button.btn-sm.SRC-floatRight {
     padding-right: 40px; }
   .explore .container-fluid .col-xs-10 {
     margin-top: -30px; }
+
+.explore .row {
+  margin-left: 0px;
+  margin-right: 0px; }
 
 .break {
   padding-right: 30px; }

@@ -75,6 +75,8 @@ export default class Explore extends React.Component<{}, ExploreState> {
         return synapseConfigs['publications']
       case '#/Explore/Studies':
         return synapseConfigs['studies']
+      case '#/Explore/Datasets':
+        return synapseConfigs['datasets']
       default:
         console.error('getPropsFromHash failed')
         return {}
@@ -86,11 +88,8 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
     const subPath = window.location.hash.substring('#/Explore/'.length)
     const isSelected = (val: string) => val === subPath
-    const isOnPublications = window.location.hash.includes('Publications')
-    // adding this class lets us target in the css the Experimental Strategy div to enlarge it
-    const optionalPubClass = isOnPublications ? 'publication' : ''
     return (
-      <div className={`container explore ${optionalPubClass}`}>
+      <div className={'container explore'}>
         <h1 className="SRC-boldText">
           Explore
         </h1>
