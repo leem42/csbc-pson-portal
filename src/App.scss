@@ -44,14 +44,25 @@ $header-height : 75px;
 $primary-text-color: #407BA0;
 $primary-action-color: #47337D;
 
+
+.SRC-primary-background-color {
+  background-color: $primary-action-color !important;
+}
+
 .SRC-primary-background-color-hover:hover {
   background: $primary-action-color !important;
-  color: white;
+  color: white !important;
+  svg.SRC-primary-text-color {
+    color: white !important;
+  }
+  a.SRC-no-focus {
+    color: white;
+  }
 }
 
 .SRC-primary-background-color-hover.SRC-nested-color:hover * {
   background-color: $primary-action-color !important;
-  color: white;
+  color: white !important;
 }
 
 .spacer {
@@ -406,16 +417,6 @@ div.SRC-title > h3 a {
   color: $primary-text-color;
 }
 
-// The facet 'Experimental Strategy' is too large to fit in the div
-// this gives more space and centers the text
-.publication div.SRC-menu:last-child {
-  height: 60px;
-  line-height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 // override src explore chart button color
 button.btn-sm.SRC-floatRight {
   border: none;
@@ -436,6 +437,11 @@ button.btn-sm.SRC-floatRight {
     & .col-xs-10 {
       margin-top: -30px;
     }
+  }
+
+  & .row {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
