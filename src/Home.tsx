@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Header } from './Header'
 import { synapseConfigs } from './synapseConfigs'
 import { ExploreButtons } from './ExploreButtons'
-import { SynapseComponents, SynapseConstants } from 'synapse-react-client'
+import { SynapseComponents } from 'synapse-react-client'
 import { Link } from 'react-router-dom'
 import { BarLoader } from 'react-spinners'
 
@@ -17,7 +17,7 @@ class Home extends React.Component<{}, HomeState> {
   constructor(props: any) {
     super(props)
     this.state = {
-      activeSynObject: synapseConfigs['grants']
+      activeSynObject: synapseConfigs.grants
     }
   }
 

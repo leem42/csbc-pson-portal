@@ -17,15 +17,17 @@ const facetAliases = {
   name: 'File Name'
 }
 
-const unitDescription = 'datasets'
+const unitDescription = 'files'
+const synapseId  = 'syn9630847'
 
-export const datasets = {
+export const data = {
   unitDescription,
   sql,
-  name: 'Datasets',
+  name: 'Files',
   menuConfig: [
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Grant Type',
@@ -33,6 +35,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Grant',
@@ -40,6 +43,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Program',
@@ -47,6 +51,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Species',
@@ -54,6 +59,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Theme',
@@ -61,6 +67,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Data Format',
@@ -68,6 +75,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Assay',
@@ -75,6 +83,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Platform',
@@ -82,6 +91,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Disease Type',
@@ -89,6 +99,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Gender',
@@ -96,6 +107,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetAliases,
       title: 'Tissue',

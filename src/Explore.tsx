@@ -70,13 +70,13 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const hash = window.location.hash
     switch (hash) {
       case '#/Explore/Grants':
-        return synapseConfigs['grants']
+        return synapseConfigs.grants
       case '#/Explore/Publications':
-        return synapseConfigs['publications']
+        return synapseConfigs.publications
       case '#/Explore/Studies':
-        return synapseConfigs['studies']
-      case '#/Explore/Datasets':
-        return synapseConfigs['datasets']
+        return synapseConfigs.studies
+      case '#/Explore/Data':
+        return synapseConfigs.data
       default:
         console.error('getPropsFromHash failed')
         return {}
@@ -87,6 +87,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const config = this.getSynapseConfigFromHash()
     const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
     const subPath = window.location.hash.substring('#/Explore/'.length)
+    const subPathDisplay = subPath === 'Data' ? 'Files' : subPath
     const isSelected = (val: string) => val === subPath
     const { queryCount = '' } = this.state.currentCountQuery
     return (
@@ -100,7 +101,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
         />
         <h3 className="SRC-boldText">
           {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString#Using_toLocaleString */}
-          {subPath} ({queryCount && queryCount.toLocaleString()})
+          {subPathDisplay} ({queryCount && queryCount.toLocaleString()})
         </h3>
         <div className="break">
           <hr/>
