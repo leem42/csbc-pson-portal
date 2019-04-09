@@ -1,8 +1,6 @@
 import { SynapseConstants } from 'synapse-react-client'
 
-// tslint:disable-next-line:max-line-length
 const sql = `SELECT * FROM syn18488466 WHERE ( ( "featured" = 'TRUE' ) )`
-
 const unitDescription = 'Datasets'
 
 export const datasets = {
