@@ -25,11 +25,11 @@ export const ExploreButtons: React.SFC<ExploreButtonProps> = ({ handleChanges, i
       <button className={setActiveClass(isSelected('Studies'))} onClick={handleStudies}>
         Studies
       </button>
-      <button className={setActiveClass(isSelected('Data'))} onClick={handleData}>
-        Data
-      </button>
       <button className={setActiveClass(isSelected('Datasets'))} onClick={handleDatasets}>
         Datasets
+      </button>
+      <button className={setActiveClass(isSelected('Files'))} onClick={handleData}>
+        Data
       </button>
     </div>
   )

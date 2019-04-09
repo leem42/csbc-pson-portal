@@ -88,6 +88,16 @@ class Home extends React.Component<{}, HomeState> {
             />
             <Link to={'/Explore/Publications'} className="viewAll center-content"> View All </Link>
           </div>
+
+          <div className="newContainer">
+            <h2 className="title"> NEW DATASETS </h2>
+            <SynapseComponents.CardContainerLogic
+              type={synapseConfigs.datasets.type}
+              sql={synapseConfigs.datasets.sql}
+              limit={CARD_LIMIT}
+            />
+            <Link to={'/Explore/Datasets'} className="viewAll center-content"> View All </Link>
+          </div>
         </div>
       </div>
     )
