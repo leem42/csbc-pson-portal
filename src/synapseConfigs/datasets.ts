@@ -1,11 +1,10 @@
 import { SynapseConstants } from 'synapse-react-client'
-
-const sql = `SELECT * FROM syn18488466 WHERE ( ( "featured" = 'TRUE' ) )`
+const sql = 'SELECT * FROM syn18488466'
 const unitDescription = 'Datasets'
 
 export const datasets = {
   unitDescription,
-  sql,
+  sql: `SELECT * FROM syn18488466 WHERE ( ( "featured" = 'TRUE' ) )`,
   name: 'Datasets',
   type: SynapseConstants.CSBC_DATASET,
   menuConfig: [
@@ -51,9 +50,7 @@ export const datasets = {
   facetName: 'tumorType',
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
-    partMask:
-      SynapseConstants.BUNDLE_MASK_QUERY_COLUMN_MODELS
-      | SynapseConstants.BUNDLE_MASK_QUERY_FACETS
+    partMask: SynapseConstants.BUNDLE_MASK_QUERY_FACETS
       | SynapseConstants.BUNDLE_MASK_QUERY_RESULTS,
     query: {
       sql,

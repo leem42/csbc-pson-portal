@@ -286,6 +286,7 @@ body {
   position: relative; }
 
 .viewAll {
+  margin-right: 15px;
   border-radius: 24px;
   background-color: #DFDFDF;
   color: black;
