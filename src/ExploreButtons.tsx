@@ -12,7 +12,7 @@ export const ExploreButtons: React.SFC<ExploreButtonProps> = ({ handleChanges, i
   const handlePublications = () => handleChanges('Publications')
   const handleStudies = () => handleChanges('Studies')
   const handleDatasets = () => handleChanges('Data')
-  const handleTools = () => handleChanges('Tools')
+  const handleTools = () => handleChanges('Datasets')
   const setActiveClass = (isSelected: boolean) => isSelected ? 'active-button' : ''
   return (
     <div className="explore-buttons">
@@ -28,9 +28,9 @@ export const ExploreButtons: React.SFC<ExploreButtonProps> = ({ handleChanges, i
       <button className={setActiveClass(isSelected('Data'))} onClick={handleDatasets}>
         Data
       </button>
-      {/* <button className={setActiveClass(isSelected('Tools'))} onClick={handleTools}>
-        Tools
-      </button> */}
+      <button className={setActiveClass(isSelected('Datasets'))} onClick={handleTools}>
+        Datasets
+      </button>
     </div>
   )
 }
