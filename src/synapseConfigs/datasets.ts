@@ -50,7 +50,7 @@ export const datasets = {
     }
   ],
   rgbIndex: 0,
-  facetName: 'species',
+  facetName: 'tumorType',
   initQueryRequest : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
     partMask:
@@ -65,7 +65,7 @@ export const datasets = {
     }
   },
   facetAliases: {
-    grantType: 'Grant Type',
+    tumorType: 'Disease Type',
   },
   countQuery : {
     concreteType: 'org.sagebionetworks.repo.model.table.QueryBundleRequest',
