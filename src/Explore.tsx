@@ -6,8 +6,8 @@ import { BarLoader } from 'react-spinners'
 const cloneDeep = require('clone-deep')
 
 type CountQuery = {
-  queryCount: number
-  subPath: string
+  queryCount: number | string
+  subPath?: string
 }
 
 type ExploreState = {
@@ -38,6 +38,14 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const subPath = window.location.hash.substring('#/Explore/'.length)
     const { headerCountQueries } =  this.state
     if (headerCountQueries.findIndex(el => el.subPath === subPath) === -1) {
+      // while its loading don't show the prior number
+      if (this.state.currentCountQuery.queryCount !== '') {
+        this.setState({
+          currentCountQuery: {
+            queryCount: ''
+          }
+        })
+      }
       const config = this.getSynapseConfigFromHash() as any
       const { countQuery } = config
       SynapseClient.getQueryTableResults(
@@ -77,6 +85,8 @@ export default class Explore extends React.Component<{}, ExploreState> {
         return synapseConfigs.studies
       case '#/Explore/Data':
         return synapseConfigs.data
+      case '#/Explore/Datasets':
+        return synapseConfigs.datasets
       default:
         console.error('getPropsFromHash failed')
         return {}
