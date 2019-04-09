@@ -98,7 +98,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const handleChanges = (val: string) => window.location.hash = `Explore/${val}`
     const subPath = window.location.hash.substring('#/Explore/'.length)
     const subPathDisplay = subPath === 'Data' ? 'Files' : subPath
-    const isSelected = (val: string) => val === subPath
+    const isSelected = (val: string) => val === subPathDisplay
     const { queryCount = '' } = this.state.currentCountQuery
     return (
       <div className={'container explore'}>
