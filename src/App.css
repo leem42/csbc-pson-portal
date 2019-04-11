@@ -54,8 +54,11 @@ body {
 .flex-display {
   display: flex; }
 
-.nav-button:hover, .viewAll:hover, .SRC-viewMoreButton:hover {
+.nav-button:hover, .explore-buttons button:hover, #exploreData:hover, .viewAll:hover, .SRC-viewMoreButton:hover {
   transition: all 400ms; }
+
+.explore-buttons button:hover, #exploreData:hover, .viewAll:hover, .SRC-viewMoreButton:hover {
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5); }
 
 .nav-logo-container {
   flex-basis: 50%; }
@@ -240,12 +243,12 @@ body {
       .explore-buttons button:nth-child(5).active-button::after {
         border-top-color: #5E697D; }
     .explore-buttons button.active-button::after {
-      border-right: solid 12px;
-      border-left: solid 12px;
+      border-right: solid 12px transparent;
+      border-left: solid 12px transparent;
       border-top: solid 12px;
       transform: translateX(-50%);
       position: absolute;
-      z-index: 3;
+      z-index: 1;
       content: '';
       top: 100%;
       left: 50%;
@@ -280,10 +283,12 @@ body {
 
 .title {
   font-weight: bold;
-  font-size: 21px; }
+  font-size: 21px;
+  margin: 0px; }
 
 .newContainer {
-  position: relative; }
+  position: relative;
+  margin: 40px 0px; }
 
 .viewAll {
   margin-right: 15px;
@@ -305,6 +310,9 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px; }
+
+.SRC-viewMoreButton:hover {
+  border-width: 0px; }
 
 div.SRC-title > h3 a {
   color: #407BA0; }
@@ -328,3 +336,6 @@ button.btn-sm.SRC-floatRight {
 
 .break {
   padding-right: 30px; }
+
+#exploreCount {
+  padding-top: 20px; }

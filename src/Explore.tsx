@@ -109,7 +109,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
           isSelected={isSelected}
           handleChanges={handleChanges}
         />
-        <h3 className="SRC-boldText">
+        <h3 id="exploreCount" className="SRC-boldText">
           {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString#Using_toLocaleString */}
           {subPathDisplay} ({queryCount && queryCount.toLocaleString()})
         </h3>

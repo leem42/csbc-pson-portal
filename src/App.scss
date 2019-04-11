@@ -78,7 +78,9 @@ $primary-action-color: #47337D;
   transition: all 400ms;
 }
 
-
+%defaultBoxShadow {
+  box-shadow: 3px 3px 5px 0 rgba(0,0,0,.5);
+}
 // end utilities
 
 // nav
@@ -322,8 +324,8 @@ $primary-action-color: #47337D;
     }
     // caret dropdown
     &.active-button::after {
-      border-right: solid 12px;
-      border-left: solid 12px;
+      border-right: solid 12px transparent;
+      border-left: solid 12px transparent;
       border-top: solid 12px;
       transform: translateX(-50%);
       position: absolute;
@@ -333,6 +335,10 @@ $primary-action-color: #47337D;
       left: 50%;
       height: 0;
       width: 0;
+    }
+    &:hover {
+      @extend %hoverFade;
+      @extend %defaultBoxShadow;
     }
   }
 }
@@ -356,6 +362,10 @@ $primary-action-color: #47337D;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  &:hover {
+    @extend %hoverFade;
+    @extend %defaultBoxShadow;
+  }
 }
 
 // end exploreData button
@@ -374,11 +384,13 @@ $primary-action-color: #47337D;
 .title {
   font-weight: bold;
   font-size: 21px;
+  margin: 0px;
 }
 // end title
 // home page utils
 .newContainer {
   position: relative;
+  margin: 40px 0px;
 }
 
 .viewAll {
@@ -397,6 +409,7 @@ $primary-action-color: #47337D;
     background-color: $primary-action-color;
     color: white;
     text-decoration: none;
+    @extend %defaultBoxShadow;
   }
 }
 
@@ -411,7 +424,9 @@ $primary-action-color: #47337D;
 // override src view more
 
 .SRC-viewMoreButton:hover {
+  border-width: 0px;
   @extend %hoverFade;
+  @extend %defaultBoxShadow;
 }
 
 div.SRC-title > h3 a {
@@ -448,4 +463,8 @@ button.btn-sm.SRC-floatRight {
 
 .break {
   padding-right: 30px;
+}
+
+#exploreCount {
+  padding-top: 20px;
 }
