@@ -248,7 +248,7 @@ body {
       border-top: solid 12px;
       transform: translateX(-50%);
       position: absolute;
-      z-index: 1;
+      z-index: 3;
       content: '';
       top: 100%;
       left: 50%;
@@ -311,7 +311,7 @@ body {
   justify-content: center;
   margin-top: 50px; }
 
-.SRC-viewMoreButton:hover {
+.SRC-viewMoreButton {
   border-width: 0px; }
 
 div.SRC-title > h3 a {

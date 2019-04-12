@@ -423,10 +423,12 @@ $primary-action-color: #47337D;
 
 // override src view more
 
-.SRC-viewMoreButton:hover {
+.SRC-viewMoreButton {
   border-width: 0px;
-  @extend %hoverFade;
-  @extend %defaultBoxShadow;
+  &:hover {
+    @extend %hoverFade;
+    @extend %defaultBoxShadow;
+  }
 }
 
 div.SRC-title > h3 a {
