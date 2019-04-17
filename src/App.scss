@@ -443,30 +443,6 @@ button.btn-sm.SRC-floatRight {
   }
 }
 
-// this is used because https://sagebionetworks.jira.com/browse/PORTALS-379
-// has yet to be solved, in the future this should not be necessary
-.explore {
-  & .container-fluid {
-    padding-left: 0px;
-    & .col-xs-2 {
-      padding-left: 0px;
-      padding-right: 40px;
-    }
-    & .col-xs-10 {
-      margin-top: -30px;
-    }
-  }
-
-  & .row {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-
-.break {
-  padding-right: 30px;
-}
-
 #exploreCount {
   padding-top: 20px;
 }

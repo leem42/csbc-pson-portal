@@ -322,20 +322,5 @@ button.btn-sm.SRC-floatRight {
   button.btn-sm.SRC-floatRight svg {
     color: #47337D !important; }
 
-.explore .container-fluid {
-  padding-left: 0px; }
-  .explore .container-fluid .col-xs-2 {
-    padding-left: 0px;
-    padding-right: 40px; }
-  .explore .container-fluid .col-xs-10 {
-    margin-top: -30px; }
-
-.explore .row {
-  margin-left: 0px;
-  margin-right: 0px; }
-
-.break {
-  padding-right: 30px; }
-
 #exploreCount {
   padding-top: 20px; }

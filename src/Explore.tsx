@@ -102,24 +102,30 @@ export default class Explore extends React.Component<{}, ExploreState> {
     const { queryCount = '' } = this.state.currentCountQuery
     return (
       <div className={'container explore'}>
-        <h1 className="SRC-boldText">
-          Explore
-        </h1>
-        <ExploreButtons
-          isSelected={isSelected}
-          handleChanges={handleChanges}
-        />
-        <h3 id="exploreCount" className="SRC-boldText">
-          {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString#Using_toLocaleString */}
-          {subPathDisplay} ({queryCount && queryCount.toLocaleString()})
-        </h3>
-        <div className="break">
-          <hr/>
+        <div className="row">
+          <div className="col-xs-12">
+            <h1 className="SRC-boldText">
+              Explore
+            </h1>
+            <ExploreButtons
+              isSelected={isSelected}
+              handleChanges={handleChanges}
+            />
+            <h3 id="exploreCount" className="SRC-boldText">
+              {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString#Using_toLocaleString */}
+              {subPathDisplay} ({queryCount && queryCount.toLocaleString()})
+            </h3>
+            <div className="break">
+              <hr/>
+            </div>
+            <div className="row">
+              <SynapseComponents.QueryWrapperMenu
+                loadingScreen={<div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>}
+                {...config}
+              />
+            </div>
+          </div>
         </div>
-        <SynapseComponents.QueryWrapperMenu
-          loadingScreen={<div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>}
-          {...config}
-        />
       </div>
     )
   }
