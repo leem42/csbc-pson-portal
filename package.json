@@ -17,7 +17,7 @@
     "react-scripts-ts": "3.1.0",
     "react-spinners": "^0.5.3",
     "sass": "^1.5.1",
-    "synapse-react-client": "1.11.21",
+    "synapse-react-client": "1.11.24",
     "typescript": "3.3.3333"
   },
   "devDependencies": {
