@@ -43,8 +43,7 @@ class Home extends React.Component<{}, HomeState> {
     const isSelected = (val: string) => val === activeSynObject.name
     const { name } = this.state.activeSynObject
     const nameLinkLocation = name === 'Files' ? 'Data' : name
-    // TODO: Fix types on loadingScreen to React.
-    const loadingScreen = <div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div> as any
+    const loadingScreen = <div className="bar-loader"><BarLoader color="#47337D" loading={true} /></div>
     return (
       <div>
         <Header/>
@@ -80,7 +79,6 @@ class Home extends React.Component<{}, HomeState> {
                   type={synapseConfigs.studies.type}
                   sql={synapseConfigs.studies.sql!}
                   limit={CARD_LIMIT}
-                  // TODO: Make unitDescription optional
                   unitDescription={''}
                 />
                 <Link to={'/Explore/Studies'} className="viewAll center-content"> View All </Link>
@@ -92,8 +90,6 @@ class Home extends React.Component<{}, HomeState> {
                   type={synapseConfigs.publications.type}
                   sql={synapseConfigs.publications.sql!}
                   limit={CARD_LIMIT}
-                  // TODO: Make unitDescription optional
-                  unitDescription={''}
                 />
                 <Link to={'/Explore/Publications'} className="viewAll center-content"> View All </Link>
               </div>
@@ -104,8 +100,6 @@ class Home extends React.Component<{}, HomeState> {
                   type={synapseConfigs.datasets.type}
                   sql={synapseConfigs.datasets.sql!}
                   limit={CARD_LIMIT}
-                  // TODO: Make unitDescription optional
-                  unitDescription={''}
                 />
                 <Link to={'/Explore/Datasets'} className="viewAll center-content"> View All </Link>
               </div>

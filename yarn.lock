@@ -8073,9 +8073,9 @@ symbol-tree@^3.2.1, symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
-synapse-react-client@1.11.28:
-  version "1.11.28"
-  resolved "https://registry.yarnpkg.com/synapse-react-client/-/synapse-react-client-1.11.28.tgz#af549f8b479d1a635f3c9ed977f1447c07c8fd5d"
+synapse-react-client@1.11.29:
+  version "1.11.29"
+  resolved "https://registry.yarnpkg.com/synapse-react-client/-/synapse-react-client-1.11.29.tgz#af3dee355df74b0f60e34ad2e6c1fa31a1b77c9f"
   dependencies:
     "@babel/runtime" "^7.4.3"
     "@fortawesome/fontawesome-svg-core" "^1.2.4"
@@ -8112,7 +8112,6 @@ synapse-react-client@1.11.28:
     markdown-it-synapse-table "^1.0.6"
     node-sass "^4.11.0"
     plotly.js-basic-dist "^1.47.3"
-    prop-types "^15.6.2"
     raf "^3.4.1"
     react latest
     react-app-polyfill "^0.2.1"
