@@ -1,9 +1,10 @@
 import { SynapseConstants } from 'synapse-react-client'
-
+import { Config } from './config'
 const sql = `SELECT * FROM syn10142562 WHERE ( "grantType" = 'U54' OR "grantType" = 'U01')`
 const unitDescription = 'grants'
+const synapseId = 'syn10142562'
 
-export const grants = {
+export const grants: Config = {
   unitDescription,
   name: 'Grants',
   type: SynapseConstants.CSBC_PROJECT,
@@ -11,6 +12,7 @@ export const grants = {
     {
       sql,
       unitDescription,
+      synapseId,
       facetName: 'consortium',
       facetAliases: {
         consortium: 'Program',
@@ -19,6 +21,7 @@ export const grants = {
     {
       sql,
       unitDescription,
+      synapseId,
       facetName: 'grantType',
       facetAliases: {
         grantType: 'Grant Type',

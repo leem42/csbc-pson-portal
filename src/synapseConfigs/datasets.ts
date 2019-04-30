@@ -1,8 +1,10 @@
 import { SynapseConstants } from 'synapse-react-client'
+import { Config } from './config'
 const sql = 'SELECT * FROM syn18488466'
 const unitDescription = 'Datasets'
+const synapseId = 'syn18488466'
 
-export const datasets = {
+export const datasets: Config = {
   unitDescription,
   sql: `SELECT * FROM syn18488466 WHERE ( ( "featured" = 'TRUE' ) )`,
   name: 'Datasets',
@@ -10,6 +12,7 @@ export const datasets = {
   menuConfig: [
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'species',
       facetAliases: {
@@ -18,11 +21,13 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'Theme'
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'experimentalStrategy',
       facetAliases: {
@@ -31,6 +36,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'platform',
       facetAliases: {
@@ -39,6 +45,7 @@ export const datasets = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'tumorType',
       facetAliases: {

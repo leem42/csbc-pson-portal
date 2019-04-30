@@ -3,6 +3,7 @@ import { SynapseComponents, SynapseClient } from 'synapse-react-client'
 import { synapseConfigs } from './synapseConfigs'
 import { ExploreButtons } from './ExploreButtons'
 import { BarLoader } from 'react-spinners'
+import { QueryWrapperMenuProps } from 'synapse-react-client/dist/containers/QueryWrapperMenu'
 const cloneDeep = require('clone-deep')
 
 type CountQuery = {
@@ -74,7 +75,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
     }
   }
 
-  getSynapseConfigFromHash() {
+  getSynapseConfigFromHash(): QueryWrapperMenuProps {
     const hash = window.location.hash
     switch (hash) {
       case '#/Explore/Grants':
@@ -88,8 +89,7 @@ export default class Explore extends React.Component<{}, ExploreState> {
       case '#/Explore/Datasets':
         return synapseConfigs.datasets
       default:
-        console.error('getPropsFromHash failed')
-        return {}
+        throw new Error(`Incompatible Hash: ${hash}`)
     }
   }
 

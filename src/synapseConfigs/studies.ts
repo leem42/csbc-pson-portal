@@ -1,9 +1,10 @@
 import { SynapseConstants } from 'synapse-react-client'
-
+import { Config } from './config'
 const unitDescription = 'studies'
 const sql = `SELECT * FROM syn18483791 WHERE ( ( "is.study" = 'TRUE' ) )`
+const synapseId = 'syn18483791'
 
-export const studies = {
+export const studies: Config = {
   unitDescription,
   sql,
   name: 'Studies',
@@ -12,6 +13,7 @@ export const studies = {
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'grantType',
       facetAliases: {
         grantType: 'Grant Type',
@@ -20,6 +22,7 @@ export const studies = {
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'centerName',
       facetAliases: {
         centerName: 'Grant',
@@ -28,6 +31,7 @@ export const studies = {
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'consortium',
       facetAliases: {
         consortium: 'Program',
@@ -36,11 +40,13 @@ export const studies = {
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'Theme'
     },
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'experimentalStrategy',
       facetAliases: {
         experimentalStrategy: 'Assay',
@@ -49,6 +55,7 @@ export const studies = {
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'tumorType',
       facetAliases: {
         tumorType: 'Disease Type',

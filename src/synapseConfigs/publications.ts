@@ -1,9 +1,11 @@
 import { SynapseConstants } from 'synapse-react-client'
+import { Config } from './config'
 
 const sql = 'SELECT * FROM syn10923842'
 const unitDescription = 'Publications'
+const synapseId = 'syn10923842'
 
-export const publications = {
+export const publications: Config = {
   unitDescription,
   sql,
   name: 'Publications',
@@ -12,11 +14,13 @@ export const publications = {
     {
       unitDescription,
       sql,
+      synapseId,
       facetName: 'Publication Year',
     },
     {
       sql,
       unitDescription,
+      synapseId,
       facetName: 'Consortium',
       facetAliases: {
         Consortium: 'Program',
@@ -25,6 +29,7 @@ export const publications = {
     {
       sql,
       unitDescription,
+      synapseId,
       facetName: 'grantType',
       facetAliases: {
         grantType: 'Grant Type',
@@ -33,6 +38,7 @@ export const publications = {
     {
       sql,
       unitDescription,
+      synapseId,
       facetName: 'diseaseType',
       facetAliases: {
         diseaseType: 'Disease',
@@ -40,11 +46,13 @@ export const publications = {
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'Theme',
     },
     {
       sql,
+      synapseId,
       unitDescription,
       facetName: 'experimentalStrategy',
       facetAliases: {
